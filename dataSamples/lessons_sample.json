@@ -1,0 +1,1602 @@
+[
+  {
+    "_id": "l1",
+    "title": "Introduction to Python - Lesson 1",
+    "content": "This is the content for lesson 1 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 1,
+    "created_at": "2024-03-02T00:00:00Z"
+  },
+  {
+    "_id": "l2",
+    "title": "Introduction to Python - Lesson 2",
+    "content": "This is the content for lesson 2 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 2,
+    "created_at": "2024-03-03T00:00:00Z"
+  },
+  {
+    "_id": "l3",
+    "title": "Introduction to Python - Lesson 3",
+    "content": "This is the content for lesson 3 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 3,
+    "created_at": "2024-03-04T00:00:00Z"
+  },
+  {
+    "_id": "l4",
+    "title": "Introduction to Python - Lesson 4",
+    "content": "This is the content for lesson 4 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 4,
+    "created_at": "2024-03-05T00:00:00Z"
+  },
+  {
+    "_id": "l5",
+    "title": "Introduction to Python - Lesson 5",
+    "content": "This is the content for lesson 5 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 5,
+    "created_at": "2024-03-06T00:00:00Z"
+  },
+  {
+    "_id": "l6",
+    "title": "Introduction to Python - Lesson 6",
+    "content": "This is the content for lesson 6 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 6,
+    "created_at": "2024-03-07T00:00:00Z"
+  },
+  {
+    "_id": "l7",
+    "title": "Introduction to Python - Lesson 7",
+    "content": "This is the content for lesson 7 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 7,
+    "created_at": "2024-03-08T00:00:00Z"
+  },
+  {
+    "_id": "l8",
+    "title": "Introduction to Python - Lesson 8",
+    "content": "This is the content for lesson 8 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 8,
+    "created_at": "2024-03-09T00:00:00Z"
+  },
+  {
+    "_id": "l9",
+    "title": "Introduction to Python - Lesson 9",
+    "content": "This is the content for lesson 9 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 9,
+    "created_at": "2024-03-10T00:00:00Z"
+  },
+  {
+    "_id": "l10",
+    "title": "Introduction to Python - Lesson 10",
+    "content": "This is the content for lesson 10 of Introduction to Python.",
+    "course_id": "c1",
+    "order_number": 10,
+    "created_at": "2024-03-11T00:00:00Z"
+  },
+  {
+    "_id": "l11",
+    "title": "Data Structures in C++ - Lesson 1",
+    "content": "This is the content for lesson 1 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 1,
+    "created_at": "2024-03-12T00:00:00Z"
+  },
+  {
+    "_id": "l12",
+    "title": "Data Structures in C++ - Lesson 2",
+    "content": "This is the content for lesson 2 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 2,
+    "created_at": "2024-03-13T00:00:00Z"
+  },
+  {
+    "_id": "l13",
+    "title": "Data Structures in C++ - Lesson 3",
+    "content": "This is the content for lesson 3 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 3,
+    "created_at": "2024-03-14T00:00:00Z"
+  },
+  {
+    "_id": "l14",
+    "title": "Data Structures in C++ - Lesson 4",
+    "content": "This is the content for lesson 4 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 4,
+    "created_at": "2024-03-15T00:00:00Z"
+  },
+  {
+    "_id": "l15",
+    "title": "Data Structures in C++ - Lesson 5",
+    "content": "This is the content for lesson 5 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 5,
+    "created_at": "2024-03-16T00:00:00Z"
+  },
+  {
+    "_id": "l16",
+    "title": "Data Structures in C++ - Lesson 6",
+    "content": "This is the content for lesson 6 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 6,
+    "created_at": "2024-03-17T00:00:00Z"
+  },
+  {
+    "_id": "l17",
+    "title": "Data Structures in C++ - Lesson 7",
+    "content": "This is the content for lesson 7 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 7,
+    "created_at": "2024-03-18T00:00:00Z"
+  },
+  {
+    "_id": "l18",
+    "title": "Data Structures in C++ - Lesson 8",
+    "content": "This is the content for lesson 8 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 8,
+    "created_at": "2024-03-19T00:00:00Z"
+  },
+  {
+    "_id": "l19",
+    "title": "Data Structures in C++ - Lesson 9",
+    "content": "This is the content for lesson 9 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 9,
+    "created_at": "2024-03-20T00:00:00Z"
+  },
+  {
+    "_id": "l20",
+    "title": "Data Structures in C++ - Lesson 10",
+    "content": "This is the content for lesson 10 of Data Structures in C++.",
+    "course_id": "c2",
+    "order_number": 10,
+    "created_at": "2024-03-21T00:00:00Z"
+  },
+  {
+    "_id": "l21",
+    "title": "Linear Algebra Essentials - Lesson 1",
+    "content": "This is the content for lesson 1 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 1,
+    "created_at": "2024-03-22T00:00:00Z"
+  },
+  {
+    "_id": "l22",
+    "title": "Linear Algebra Essentials - Lesson 2",
+    "content": "This is the content for lesson 2 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 2,
+    "created_at": "2024-03-23T00:00:00Z"
+  },
+  {
+    "_id": "l23",
+    "title": "Linear Algebra Essentials - Lesson 3",
+    "content": "This is the content for lesson 3 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 3,
+    "created_at": "2024-03-24T00:00:00Z"
+  },
+  {
+    "_id": "l24",
+    "title": "Linear Algebra Essentials - Lesson 4",
+    "content": "This is the content for lesson 4 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 4,
+    "created_at": "2024-03-25T00:00:00Z"
+  },
+  {
+    "_id": "l25",
+    "title": "Linear Algebra Essentials - Lesson 5",
+    "content": "This is the content for lesson 5 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 5,
+    "created_at": "2024-03-26T00:00:00Z"
+  },
+  {
+    "_id": "l26",
+    "title": "Linear Algebra Essentials - Lesson 6",
+    "content": "This is the content for lesson 6 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 6,
+    "created_at": "2024-03-27T00:00:00Z"
+  },
+  {
+    "_id": "l27",
+    "title": "Linear Algebra Essentials - Lesson 7",
+    "content": "This is the content for lesson 7 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 7,
+    "created_at": "2024-03-28T00:00:00Z"
+  },
+  {
+    "_id": "l28",
+    "title": "Linear Algebra Essentials - Lesson 8",
+    "content": "This is the content for lesson 8 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 8,
+    "created_at": "2024-03-29T00:00:00Z"
+  },
+  {
+    "_id": "l29",
+    "title": "Linear Algebra Essentials - Lesson 9",
+    "content": "This is the content for lesson 9 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 9,
+    "created_at": "2024-03-30T00:00:00Z"
+  },
+  {
+    "_id": "l30",
+    "title": "Linear Algebra Essentials - Lesson 10",
+    "content": "This is the content for lesson 10 of Linear Algebra Essentials.",
+    "course_id": "c3",
+    "order_number": 10,
+    "created_at": "2024-03-31T00:00:00Z"
+  },
+  {
+    "_id": "l31",
+    "title": "Introduction to Data Science - Lesson 1",
+    "content": "This is the content for lesson 1 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 1,
+    "created_at": "2024-04-01T00:00:00Z"
+  },
+  {
+    "_id": "l32",
+    "title": "Introduction to Data Science - Lesson 2",
+    "content": "This is the content for lesson 2 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 2,
+    "created_at": "2024-04-02T00:00:00Z"
+  },
+  {
+    "_id": "l33",
+    "title": "Introduction to Data Science - Lesson 3",
+    "content": "This is the content for lesson 3 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 3,
+    "created_at": "2024-04-03T00:00:00Z"
+  },
+  {
+    "_id": "l34",
+    "title": "Introduction to Data Science - Lesson 4",
+    "content": "This is the content for lesson 4 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 4,
+    "created_at": "2024-04-04T00:00:00Z"
+  },
+  {
+    "_id": "l35",
+    "title": "Introduction to Data Science - Lesson 5",
+    "content": "This is the content for lesson 5 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 5,
+    "created_at": "2024-04-05T00:00:00Z"
+  },
+  {
+    "_id": "l36",
+    "title": "Introduction to Data Science - Lesson 6",
+    "content": "This is the content for lesson 6 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 6,
+    "created_at": "2024-04-06T00:00:00Z"
+  },
+  {
+    "_id": "l37",
+    "title": "Introduction to Data Science - Lesson 7",
+    "content": "This is the content for lesson 7 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 7,
+    "created_at": "2024-04-07T00:00:00Z"
+  },
+  {
+    "_id": "l38",
+    "title": "Introduction to Data Science - Lesson 8",
+    "content": "This is the content for lesson 8 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 8,
+    "created_at": "2024-04-08T00:00:00Z"
+  },
+  {
+    "_id": "l39",
+    "title": "Introduction to Data Science - Lesson 9",
+    "content": "This is the content for lesson 9 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 9,
+    "created_at": "2024-04-09T00:00:00Z"
+  },
+  {
+    "_id": "l40",
+    "title": "Introduction to Data Science - Lesson 10",
+    "content": "This is the content for lesson 10 of Introduction to Data Science.",
+    "course_id": "c4",
+    "order_number": 10,
+    "created_at": "2024-04-10T00:00:00Z"
+  },
+  {
+    "_id": "l41",
+    "title": "Object-Oriented Programming with Java - Lesson 1",
+    "content": "This is the content for lesson 1 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 1,
+    "created_at": "2024-04-11T00:00:00Z"
+  },
+  {
+    "_id": "l42",
+    "title": "Object-Oriented Programming with Java - Lesson 2",
+    "content": "This is the content for lesson 2 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 2,
+    "created_at": "2024-04-12T00:00:00Z"
+  },
+  {
+    "_id": "l43",
+    "title": "Object-Oriented Programming with Java - Lesson 3",
+    "content": "This is the content for lesson 3 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 3,
+    "created_at": "2024-04-13T00:00:00Z"
+  },
+  {
+    "_id": "l44",
+    "title": "Object-Oriented Programming with Java - Lesson 4",
+    "content": "This is the content for lesson 4 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 4,
+    "created_at": "2024-04-14T00:00:00Z"
+  },
+  {
+    "_id": "l45",
+    "title": "Object-Oriented Programming with Java - Lesson 5",
+    "content": "This is the content for lesson 5 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 5,
+    "created_at": "2024-04-15T00:00:00Z"
+  },
+  {
+    "_id": "l46",
+    "title": "Object-Oriented Programming with Java - Lesson 6",
+    "content": "This is the content for lesson 6 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 6,
+    "created_at": "2024-04-16T00:00:00Z"
+  },
+  {
+    "_id": "l47",
+    "title": "Object-Oriented Programming with Java - Lesson 7",
+    "content": "This is the content for lesson 7 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 7,
+    "created_at": "2024-04-17T00:00:00Z"
+  },
+  {
+    "_id": "l48",
+    "title": "Object-Oriented Programming with Java - Lesson 8",
+    "content": "This is the content for lesson 8 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 8,
+    "created_at": "2024-04-18T00:00:00Z"
+  },
+  {
+    "_id": "l49",
+    "title": "Object-Oriented Programming with Java - Lesson 9",
+    "content": "This is the content for lesson 9 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 9,
+    "created_at": "2024-04-19T00:00:00Z"
+  },
+  {
+    "_id": "l50",
+    "title": "Object-Oriented Programming with Java - Lesson 10",
+    "content": "This is the content for lesson 10 of Object-Oriented Programming with Java.",
+    "course_id": "c5",
+    "order_number": 10,
+    "created_at": "2024-04-20T00:00:00Z"
+  },
+  {
+    "_id": "l51",
+    "title": "Organic Chemistry I - Lesson 1",
+    "content": "This is the content for lesson 1 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 1,
+    "created_at": "2024-04-21T00:00:00Z"
+  },
+  {
+    "_id": "l52",
+    "title": "Organic Chemistry I - Lesson 2",
+    "content": "This is the content for lesson 2 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 2,
+    "created_at": "2024-04-22T00:00:00Z"
+  },
+  {
+    "_id": "l53",
+    "title": "Organic Chemistry I - Lesson 3",
+    "content": "This is the content for lesson 3 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 3,
+    "created_at": "2024-04-23T00:00:00Z"
+  },
+  {
+    "_id": "l54",
+    "title": "Organic Chemistry I - Lesson 4",
+    "content": "This is the content for lesson 4 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 4,
+    "created_at": "2024-04-24T00:00:00Z"
+  },
+  {
+    "_id": "l55",
+    "title": "Organic Chemistry I - Lesson 5",
+    "content": "This is the content for lesson 5 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 5,
+    "created_at": "2024-04-25T00:00:00Z"
+  },
+  {
+    "_id": "l56",
+    "title": "Organic Chemistry I - Lesson 6",
+    "content": "This is the content for lesson 6 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 6,
+    "created_at": "2024-04-26T00:00:00Z"
+  },
+  {
+    "_id": "l57",
+    "title": "Organic Chemistry I - Lesson 7",
+    "content": "This is the content for lesson 7 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 7,
+    "created_at": "2024-04-27T00:00:00Z"
+  },
+  {
+    "_id": "l58",
+    "title": "Organic Chemistry I - Lesson 8",
+    "content": "This is the content for lesson 8 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 8,
+    "created_at": "2024-04-28T00:00:00Z"
+  },
+  {
+    "_id": "l59",
+    "title": "Organic Chemistry I - Lesson 9",
+    "content": "This is the content for lesson 9 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 9,
+    "created_at": "2024-04-29T00:00:00Z"
+  },
+  {
+    "_id": "l60",
+    "title": "Organic Chemistry I - Lesson 10",
+    "content": "This is the content for lesson 10 of Organic Chemistry I.",
+    "course_id": "c6",
+    "order_number": 10,
+    "created_at": "2024-04-30T00:00:00Z"
+  },
+  {
+    "_id": "l61",
+    "title": "Calculus I - Lesson 1",
+    "content": "This is the content for lesson 1 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 1,
+    "created_at": "2024-05-01T00:00:00Z"
+  },
+  {
+    "_id": "l62",
+    "title": "Calculus I - Lesson 2",
+    "content": "This is the content for lesson 2 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 2,
+    "created_at": "2024-05-02T00:00:00Z"
+  },
+  {
+    "_id": "l63",
+    "title": "Calculus I - Lesson 3",
+    "content": "This is the content for lesson 3 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 3,
+    "created_at": "2024-05-03T00:00:00Z"
+  },
+  {
+    "_id": "l64",
+    "title": "Calculus I - Lesson 4",
+    "content": "This is the content for lesson 4 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 4,
+    "created_at": "2024-05-04T00:00:00Z"
+  },
+  {
+    "_id": "l65",
+    "title": "Calculus I - Lesson 5",
+    "content": "This is the content for lesson 5 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 5,
+    "created_at": "2024-05-05T00:00:00Z"
+  },
+  {
+    "_id": "l66",
+    "title": "Calculus I - Lesson 6",
+    "content": "This is the content for lesson 6 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 6,
+    "created_at": "2024-05-06T00:00:00Z"
+  },
+  {
+    "_id": "l67",
+    "title": "Calculus I - Lesson 7",
+    "content": "This is the content for lesson 7 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 7,
+    "created_at": "2024-05-07T00:00:00Z"
+  },
+  {
+    "_id": "l68",
+    "title": "Calculus I - Lesson 8",
+    "content": "This is the content for lesson 8 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 8,
+    "created_at": "2024-05-08T00:00:00Z"
+  },
+  {
+    "_id": "l69",
+    "title": "Calculus I - Lesson 9",
+    "content": "This is the content for lesson 9 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 9,
+    "created_at": "2024-05-09T00:00:00Z"
+  },
+  {
+    "_id": "l70",
+    "title": "Calculus I - Lesson 10",
+    "content": "This is the content for lesson 10 of Calculus I.",
+    "course_id": "c7",
+    "order_number": 10,
+    "created_at": "2024-05-10T00:00:00Z"
+  },
+  {
+    "_id": "l71",
+    "title": "Modern Physics - Lesson 1",
+    "content": "This is the content for lesson 1 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 1,
+    "created_at": "2024-05-11T00:00:00Z"
+  },
+  {
+    "_id": "l72",
+    "title": "Modern Physics - Lesson 2",
+    "content": "This is the content for lesson 2 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 2,
+    "created_at": "2024-05-12T00:00:00Z"
+  },
+  {
+    "_id": "l73",
+    "title": "Modern Physics - Lesson 3",
+    "content": "This is the content for lesson 3 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 3,
+    "created_at": "2024-05-13T00:00:00Z"
+  },
+  {
+    "_id": "l74",
+    "title": "Modern Physics - Lesson 4",
+    "content": "This is the content for lesson 4 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 4,
+    "created_at": "2024-05-14T00:00:00Z"
+  },
+  {
+    "_id": "l75",
+    "title": "Modern Physics - Lesson 5",
+    "content": "This is the content for lesson 5 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 5,
+    "created_at": "2024-05-15T00:00:00Z"
+  },
+  {
+    "_id": "l76",
+    "title": "Modern Physics - Lesson 6",
+    "content": "This is the content for lesson 6 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 6,
+    "created_at": "2024-05-16T00:00:00Z"
+  },
+  {
+    "_id": "l77",
+    "title": "Modern Physics - Lesson 7",
+    "content": "This is the content for lesson 7 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 7,
+    "created_at": "2024-05-17T00:00:00Z"
+  },
+  {
+    "_id": "l78",
+    "title": "Modern Physics - Lesson 8",
+    "content": "This is the content for lesson 8 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 8,
+    "created_at": "2024-05-18T00:00:00Z"
+  },
+  {
+    "_id": "l79",
+    "title": "Modern Physics - Lesson 9",
+    "content": "This is the content for lesson 9 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 9,
+    "created_at": "2024-05-19T00:00:00Z"
+  },
+  {
+    "_id": "l80",
+    "title": "Modern Physics - Lesson 10",
+    "content": "This is the content for lesson 10 of Modern Physics.",
+    "course_id": "c8",
+    "order_number": 10,
+    "created_at": "2024-05-20T00:00:00Z"
+  },
+  {
+    "_id": "l81",
+    "title": "Data Visualization with Python - Lesson 1",
+    "content": "This is the content for lesson 1 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 1,
+    "created_at": "2024-05-21T00:00:00Z"
+  },
+  {
+    "_id": "l82",
+    "title": "Data Visualization with Python - Lesson 2",
+    "content": "This is the content for lesson 2 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 2,
+    "created_at": "2024-05-22T00:00:00Z"
+  },
+  {
+    "_id": "l83",
+    "title": "Data Visualization with Python - Lesson 3",
+    "content": "This is the content for lesson 3 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 3,
+    "created_at": "2024-05-23T00:00:00Z"
+  },
+  {
+    "_id": "l84",
+    "title": "Data Visualization with Python - Lesson 4",
+    "content": "This is the content for lesson 4 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 4,
+    "created_at": "2024-05-24T00:00:00Z"
+  },
+  {
+    "_id": "l85",
+    "title": "Data Visualization with Python - Lesson 5",
+    "content": "This is the content for lesson 5 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 5,
+    "created_at": "2024-05-25T00:00:00Z"
+  },
+  {
+    "_id": "l86",
+    "title": "Data Visualization with Python - Lesson 6",
+    "content": "This is the content for lesson 6 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 6,
+    "created_at": "2024-05-26T00:00:00Z"
+  },
+  {
+    "_id": "l87",
+    "title": "Data Visualization with Python - Lesson 7",
+    "content": "This is the content for lesson 7 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 7,
+    "created_at": "2024-05-27T00:00:00Z"
+  },
+  {
+    "_id": "l88",
+    "title": "Data Visualization with Python - Lesson 8",
+    "content": "This is the content for lesson 8 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 8,
+    "created_at": "2024-05-28T00:00:00Z"
+  },
+  {
+    "_id": "l89",
+    "title": "Data Visualization with Python - Lesson 9",
+    "content": "This is the content for lesson 9 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 9,
+    "created_at": "2024-05-29T00:00:00Z"
+  },
+  {
+    "_id": "l90",
+    "title": "Data Visualization with Python - Lesson 10",
+    "content": "This is the content for lesson 10 of Data Visualization with Python.",
+    "course_id": "c9",
+    "order_number": 10,
+    "created_at": "2024-05-30T00:00:00Z"
+  },
+  {
+    "_id": "l91",
+    "title": "Web Development Basics - Lesson 1",
+    "content": "This is the content for lesson 1 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 1,
+    "created_at": "2024-05-31T00:00:00Z"
+  },
+  {
+    "_id": "l92",
+    "title": "Web Development Basics - Lesson 2",
+    "content": "This is the content for lesson 2 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 2,
+    "created_at": "2024-06-01T00:00:00Z"
+  },
+  {
+    "_id": "l93",
+    "title": "Web Development Basics - Lesson 3",
+    "content": "This is the content for lesson 3 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 3,
+    "created_at": "2024-06-02T00:00:00Z"
+  },
+  {
+    "_id": "l94",
+    "title": "Web Development Basics - Lesson 4",
+    "content": "This is the content for lesson 4 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 4,
+    "created_at": "2024-06-03T00:00:00Z"
+  },
+  {
+    "_id": "l95",
+    "title": "Web Development Basics - Lesson 5",
+    "content": "This is the content for lesson 5 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 5,
+    "created_at": "2024-06-04T00:00:00Z"
+  },
+  {
+    "_id": "l96",
+    "title": "Web Development Basics - Lesson 6",
+    "content": "This is the content for lesson 6 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 6,
+    "created_at": "2024-06-05T00:00:00Z"
+  },
+  {
+    "_id": "l97",
+    "title": "Web Development Basics - Lesson 7",
+    "content": "This is the content for lesson 7 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 7,
+    "created_at": "2024-06-06T00:00:00Z"
+  },
+  {
+    "_id": "l98",
+    "title": "Web Development Basics - Lesson 8",
+    "content": "This is the content for lesson 8 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 8,
+    "created_at": "2024-06-07T00:00:00Z"
+  },
+  {
+    "_id": "l99",
+    "title": "Web Development Basics - Lesson 9",
+    "content": "This is the content for lesson 9 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 9,
+    "created_at": "2024-06-08T00:00:00Z"
+  },
+  {
+    "_id": "l100",
+    "title": "Web Development Basics - Lesson 10",
+    "content": "This is the content for lesson 10 of Web Development Basics.",
+    "course_id": "c10",
+    "order_number": 10,
+    "created_at": "2024-06-09T00:00:00Z"
+  },
+  {
+    "_id": "l101",
+    "title": "Database Design - Lesson 1",
+    "content": "This is the content for lesson 1 of Database Design.",
+    "course_id": "c11",
+    "order_number": 1,
+    "created_at": "2024-06-10T00:00:00Z"
+  },
+  {
+    "_id": "l102",
+    "title": "Database Design - Lesson 2",
+    "content": "This is the content for lesson 2 of Database Design.",
+    "course_id": "c11",
+    "order_number": 2,
+    "created_at": "2024-06-11T00:00:00Z"
+  },
+  {
+    "_id": "l103",
+    "title": "Database Design - Lesson 3",
+    "content": "This is the content for lesson 3 of Database Design.",
+    "course_id": "c11",
+    "order_number": 3,
+    "created_at": "2024-06-12T00:00:00Z"
+  },
+  {
+    "_id": "l104",
+    "title": "Database Design - Lesson 4",
+    "content": "This is the content for lesson 4 of Database Design.",
+    "course_id": "c11",
+    "order_number": 4,
+    "created_at": "2024-06-13T00:00:00Z"
+  },
+  {
+    "_id": "l105",
+    "title": "Database Design - Lesson 5",
+    "content": "This is the content for lesson 5 of Database Design.",
+    "course_id": "c11",
+    "order_number": 5,
+    "created_at": "2024-06-14T00:00:00Z"
+  },
+  {
+    "_id": "l106",
+    "title": "Database Design - Lesson 6",
+    "content": "This is the content for lesson 6 of Database Design.",
+    "course_id": "c11",
+    "order_number": 6,
+    "created_at": "2024-06-15T00:00:00Z"
+  },
+  {
+    "_id": "l107",
+    "title": "Database Design - Lesson 7",
+    "content": "This is the content for lesson 7 of Database Design.",
+    "course_id": "c11",
+    "order_number": 7,
+    "created_at": "2024-06-16T00:00:00Z"
+  },
+  {
+    "_id": "l108",
+    "title": "Database Design - Lesson 8",
+    "content": "This is the content for lesson 8 of Database Design.",
+    "course_id": "c11",
+    "order_number": 8,
+    "created_at": "2024-06-17T00:00:00Z"
+  },
+  {
+    "_id": "l109",
+    "title": "Database Design - Lesson 9",
+    "content": "This is the content for lesson 9 of Database Design.",
+    "course_id": "c11",
+    "order_number": 9,
+    "created_at": "2024-06-18T00:00:00Z"
+  },
+  {
+    "_id": "l110",
+    "title": "Database Design - Lesson 10",
+    "content": "This is the content for lesson 10 of Database Design.",
+    "course_id": "c11",
+    "order_number": 10,
+    "created_at": "2024-06-19T00:00:00Z"
+  },
+  {
+    "_id": "l111",
+    "title": "Machine Learning 101 - Lesson 1",
+    "content": "This is the content for lesson 1 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 1,
+    "created_at": "2024-06-20T00:00:00Z"
+  },
+  {
+    "_id": "l112",
+    "title": "Machine Learning 101 - Lesson 2",
+    "content": "This is the content for lesson 2 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 2,
+    "created_at": "2024-06-21T00:00:00Z"
+  },
+  {
+    "_id": "l113",
+    "title": "Machine Learning 101 - Lesson 3",
+    "content": "This is the content for lesson 3 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 3,
+    "created_at": "2024-06-22T00:00:00Z"
+  },
+  {
+    "_id": "l114",
+    "title": "Machine Learning 101 - Lesson 4",
+    "content": "This is the content for lesson 4 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 4,
+    "created_at": "2024-06-23T00:00:00Z"
+  },
+  {
+    "_id": "l115",
+    "title": "Machine Learning 101 - Lesson 5",
+    "content": "This is the content for lesson 5 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 5,
+    "created_at": "2024-06-24T00:00:00Z"
+  },
+  {
+    "_id": "l116",
+    "title": "Machine Learning 101 - Lesson 6",
+    "content": "This is the content for lesson 6 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 6,
+    "created_at": "2024-06-25T00:00:00Z"
+  },
+  {
+    "_id": "l117",
+    "title": "Machine Learning 101 - Lesson 7",
+    "content": "This is the content for lesson 7 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 7,
+    "created_at": "2024-06-26T00:00:00Z"
+  },
+  {
+    "_id": "l118",
+    "title": "Machine Learning 101 - Lesson 8",
+    "content": "This is the content for lesson 8 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 8,
+    "created_at": "2024-06-27T00:00:00Z"
+  },
+  {
+    "_id": "l119",
+    "title": "Machine Learning 101 - Lesson 9",
+    "content": "This is the content for lesson 9 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 9,
+    "created_at": "2024-06-28T00:00:00Z"
+  },
+  {
+    "_id": "l120",
+    "title": "Machine Learning 101 - Lesson 10",
+    "content": "This is the content for lesson 10 of Machine Learning 101.",
+    "course_id": "c12",
+    "order_number": 10,
+    "created_at": "2024-06-29T00:00:00Z"
+  },
+  {
+    "_id": "l121",
+    "title": "Introduction to Algorithms - Lesson 1",
+    "content": "This is the content for lesson 1 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 1,
+    "created_at": "2024-06-30T00:00:00Z"
+  },
+  {
+    "_id": "l122",
+    "title": "Introduction to Algorithms - Lesson 2",
+    "content": "This is the content for lesson 2 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 2,
+    "created_at": "2024-07-01T00:00:00Z"
+  },
+  {
+    "_id": "l123",
+    "title": "Introduction to Algorithms - Lesson 3",
+    "content": "This is the content for lesson 3 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 3,
+    "created_at": "2024-07-02T00:00:00Z"
+  },
+  {
+    "_id": "l124",
+    "title": "Introduction to Algorithms - Lesson 4",
+    "content": "This is the content for lesson 4 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 4,
+    "created_at": "2024-07-03T00:00:00Z"
+  },
+  {
+    "_id": "l125",
+    "title": "Introduction to Algorithms - Lesson 5",
+    "content": "This is the content for lesson 5 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 5,
+    "created_at": "2024-07-04T00:00:00Z"
+  },
+  {
+    "_id": "l126",
+    "title": "Introduction to Algorithms - Lesson 6",
+    "content": "This is the content for lesson 6 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 6,
+    "created_at": "2024-07-05T00:00:00Z"
+  },
+  {
+    "_id": "l127",
+    "title": "Introduction to Algorithms - Lesson 7",
+    "content": "This is the content for lesson 7 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 7,
+    "created_at": "2024-07-06T00:00:00Z"
+  },
+  {
+    "_id": "l128",
+    "title": "Introduction to Algorithms - Lesson 8",
+    "content": "This is the content for lesson 8 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 8,
+    "created_at": "2024-07-07T00:00:00Z"
+  },
+  {
+    "_id": "l129",
+    "title": "Introduction to Algorithms - Lesson 9",
+    "content": "This is the content for lesson 9 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 9,
+    "created_at": "2024-07-08T00:00:00Z"
+  },
+  {
+    "_id": "l130",
+    "title": "Introduction to Algorithms - Lesson 10",
+    "content": "This is the content for lesson 10 of Introduction to Algorithms.",
+    "course_id": "c13",
+    "order_number": 10,
+    "created_at": "2024-07-09T00:00:00Z"
+  },
+  {
+    "_id": "l131",
+    "title": "Network Fundamentals - Lesson 1",
+    "content": "This is the content for lesson 1 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 1,
+    "created_at": "2024-07-10T00:00:00Z"
+  },
+  {
+    "_id": "l132",
+    "title": "Network Fundamentals - Lesson 2",
+    "content": "This is the content for lesson 2 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 2,
+    "created_at": "2024-07-11T00:00:00Z"
+  },
+  {
+    "_id": "l133",
+    "title": "Network Fundamentals - Lesson 3",
+    "content": "This is the content for lesson 3 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 3,
+    "created_at": "2024-07-12T00:00:00Z"
+  },
+  {
+    "_id": "l134",
+    "title": "Network Fundamentals - Lesson 4",
+    "content": "This is the content for lesson 4 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 4,
+    "created_at": "2024-07-13T00:00:00Z"
+  },
+  {
+    "_id": "l135",
+    "title": "Network Fundamentals - Lesson 5",
+    "content": "This is the content for lesson 5 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 5,
+    "created_at": "2024-07-14T00:00:00Z"
+  },
+  {
+    "_id": "l136",
+    "title": "Network Fundamentals - Lesson 6",
+    "content": "This is the content for lesson 6 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 6,
+    "created_at": "2024-07-15T00:00:00Z"
+  },
+  {
+    "_id": "l137",
+    "title": "Network Fundamentals - Lesson 7",
+    "content": "This is the content for lesson 7 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 7,
+    "created_at": "2024-07-16T00:00:00Z"
+  },
+  {
+    "_id": "l138",
+    "title": "Network Fundamentals - Lesson 8",
+    "content": "This is the content for lesson 8 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 8,
+    "created_at": "2024-07-17T00:00:00Z"
+  },
+  {
+    "_id": "l139",
+    "title": "Network Fundamentals - Lesson 9",
+    "content": "This is the content for lesson 9 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 9,
+    "created_at": "2024-07-18T00:00:00Z"
+  },
+  {
+    "_id": "l140",
+    "title": "Network Fundamentals - Lesson 10",
+    "content": "This is the content for lesson 10 of Network Fundamentals.",
+    "course_id": "c14",
+    "order_number": 10,
+    "created_at": "2024-07-19T00:00:00Z"
+  },
+  {
+    "_id": "l141",
+    "title": "JavaScript for Beginners - Lesson 1",
+    "content": "This is the content for lesson 1 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 1,
+    "created_at": "2024-07-20T00:00:00Z"
+  },
+  {
+    "_id": "l142",
+    "title": "JavaScript for Beginners - Lesson 2",
+    "content": "This is the content for lesson 2 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 2,
+    "created_at": "2024-07-21T00:00:00Z"
+  },
+  {
+    "_id": "l143",
+    "title": "JavaScript for Beginners - Lesson 3",
+    "content": "This is the content for lesson 3 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 3,
+    "created_at": "2024-07-22T00:00:00Z"
+  },
+  {
+    "_id": "l144",
+    "title": "JavaScript for Beginners - Lesson 4",
+    "content": "This is the content for lesson 4 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 4,
+    "created_at": "2024-07-23T00:00:00Z"
+  },
+  {
+    "_id": "l145",
+    "title": "JavaScript for Beginners - Lesson 5",
+    "content": "This is the content for lesson 5 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 5,
+    "created_at": "2024-07-24T00:00:00Z"
+  },
+  {
+    "_id": "l146",
+    "title": "JavaScript for Beginners - Lesson 6",
+    "content": "This is the content for lesson 6 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 6,
+    "created_at": "2024-07-25T00:00:00Z"
+  },
+  {
+    "_id": "l147",
+    "title": "JavaScript for Beginners - Lesson 7",
+    "content": "This is the content for lesson 7 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 7,
+    "created_at": "2024-07-26T00:00:00Z"
+  },
+  {
+    "_id": "l148",
+    "title": "JavaScript for Beginners - Lesson 8",
+    "content": "This is the content for lesson 8 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 8,
+    "created_at": "2024-07-27T00:00:00Z"
+  },
+  {
+    "_id": "l149",
+    "title": "JavaScript for Beginners - Lesson 9",
+    "content": "This is the content for lesson 9 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 9,
+    "created_at": "2024-07-28T00:00:00Z"
+  },
+  {
+    "_id": "l150",
+    "title": "JavaScript for Beginners - Lesson 10",
+    "content": "This is the content for lesson 10 of JavaScript for Beginners.",
+    "course_id": "c15",
+    "order_number": 10,
+    "created_at": "2024-07-29T00:00:00Z"
+  },
+  {
+    "_id": "l151",
+    "title": "Advanced Python - Lesson 1",
+    "content": "This is the content for lesson 1 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 1,
+    "created_at": "2024-07-30T00:00:00Z"
+  },
+  {
+    "_id": "l152",
+    "title": "Advanced Python - Lesson 2",
+    "content": "This is the content for lesson 2 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 2,
+    "created_at": "2024-07-31T00:00:00Z"
+  },
+  {
+    "_id": "l153",
+    "title": "Advanced Python - Lesson 3",
+    "content": "This is the content for lesson 3 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 3,
+    "created_at": "2024-08-01T00:00:00Z"
+  },
+  {
+    "_id": "l154",
+    "title": "Advanced Python - Lesson 4",
+    "content": "This is the content for lesson 4 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 4,
+    "created_at": "2024-08-02T00:00:00Z"
+  },
+  {
+    "_id": "l155",
+    "title": "Advanced Python - Lesson 5",
+    "content": "This is the content for lesson 5 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 5,
+    "created_at": "2024-08-03T00:00:00Z"
+  },
+  {
+    "_id": "l156",
+    "title": "Advanced Python - Lesson 6",
+    "content": "This is the content for lesson 6 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 6,
+    "created_at": "2024-08-04T00:00:00Z"
+  },
+  {
+    "_id": "l157",
+    "title": "Advanced Python - Lesson 7",
+    "content": "This is the content for lesson 7 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 7,
+    "created_at": "2024-08-05T00:00:00Z"
+  },
+  {
+    "_id": "l158",
+    "title": "Advanced Python - Lesson 8",
+    "content": "This is the content for lesson 8 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 8,
+    "created_at": "2024-08-06T00:00:00Z"
+  },
+  {
+    "_id": "l159",
+    "title": "Advanced Python - Lesson 9",
+    "content": "This is the content for lesson 9 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 9,
+    "created_at": "2024-08-07T00:00:00Z"
+  },
+  {
+    "_id": "l160",
+    "title": "Advanced Python - Lesson 10",
+    "content": "This is the content for lesson 10 of Advanced Python.",
+    "course_id": "c16",
+    "order_number": 10,
+    "created_at": "2024-08-08T00:00:00Z"
+  },
+  {
+    "_id": "l161",
+    "title": "Physical Chemistry - Lesson 1",
+    "content": "This is the content for lesson 1 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 1,
+    "created_at": "2024-08-09T00:00:00Z"
+  },
+  {
+    "_id": "l162",
+    "title": "Physical Chemistry - Lesson 2",
+    "content": "This is the content for lesson 2 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 2,
+    "created_at": "2024-08-10T00:00:00Z"
+  },
+  {
+    "_id": "l163",
+    "title": "Physical Chemistry - Lesson 3",
+    "content": "This is the content for lesson 3 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 3,
+    "created_at": "2024-08-11T00:00:00Z"
+  },
+  {
+    "_id": "l164",
+    "title": "Physical Chemistry - Lesson 4",
+    "content": "This is the content for lesson 4 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 4,
+    "created_at": "2024-08-12T00:00:00Z"
+  },
+  {
+    "_id": "l165",
+    "title": "Physical Chemistry - Lesson 5",
+    "content": "This is the content for lesson 5 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 5,
+    "created_at": "2024-08-13T00:00:00Z"
+  },
+  {
+    "_id": "l166",
+    "title": "Physical Chemistry - Lesson 6",
+    "content": "This is the content for lesson 6 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 6,
+    "created_at": "2024-08-14T00:00:00Z"
+  },
+  {
+    "_id": "l167",
+    "title": "Physical Chemistry - Lesson 7",
+    "content": "This is the content for lesson 7 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 7,
+    "created_at": "2024-08-15T00:00:00Z"
+  },
+  {
+    "_id": "l168",
+    "title": "Physical Chemistry - Lesson 8",
+    "content": "This is the content for lesson 8 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 8,
+    "created_at": "2024-08-16T00:00:00Z"
+  },
+  {
+    "_id": "l169",
+    "title": "Physical Chemistry - Lesson 9",
+    "content": "This is the content for lesson 9 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 9,
+    "created_at": "2024-08-17T00:00:00Z"
+  },
+  {
+    "_id": "l170",
+    "title": "Physical Chemistry - Lesson 10",
+    "content": "This is the content for lesson 10 of Physical Chemistry.",
+    "course_id": "c17",
+    "order_number": 10,
+    "created_at": "2024-08-18T00:00:00Z"
+  },
+  {
+    "_id": "l171",
+    "title": "Statistics with R - Lesson 1",
+    "content": "This is the content for lesson 1 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 1,
+    "created_at": "2024-08-19T00:00:00Z"
+  },
+  {
+    "_id": "l172",
+    "title": "Statistics with R - Lesson 2",
+    "content": "This is the content for lesson 2 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 2,
+    "created_at": "2024-08-20T00:00:00Z"
+  },
+  {
+    "_id": "l173",
+    "title": "Statistics with R - Lesson 3",
+    "content": "This is the content for lesson 3 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 3,
+    "created_at": "2024-08-21T00:00:00Z"
+  },
+  {
+    "_id": "l174",
+    "title": "Statistics with R - Lesson 4",
+    "content": "This is the content for lesson 4 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 4,
+    "created_at": "2024-08-22T00:00:00Z"
+  },
+  {
+    "_id": "l175",
+    "title": "Statistics with R - Lesson 5",
+    "content": "This is the content for lesson 5 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 5,
+    "created_at": "2024-08-23T00:00:00Z"
+  },
+  {
+    "_id": "l176",
+    "title": "Statistics with R - Lesson 6",
+    "content": "This is the content for lesson 6 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 6,
+    "created_at": "2024-08-24T00:00:00Z"
+  },
+  {
+    "_id": "l177",
+    "title": "Statistics with R - Lesson 7",
+    "content": "This is the content for lesson 7 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 7,
+    "created_at": "2024-08-25T00:00:00Z"
+  },
+  {
+    "_id": "l178",
+    "title": "Statistics with R - Lesson 8",
+    "content": "This is the content for lesson 8 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 8,
+    "created_at": "2024-08-26T00:00:00Z"
+  },
+  {
+    "_id": "l179",
+    "title": "Statistics with R - Lesson 9",
+    "content": "This is the content for lesson 9 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 9,
+    "created_at": "2024-08-27T00:00:00Z"
+  },
+  {
+    "_id": "l180",
+    "title": "Statistics with R - Lesson 10",
+    "content": "This is the content for lesson 10 of Statistics with R.",
+    "course_id": "c18",
+    "order_number": 10,
+    "created_at": "2024-08-28T00:00:00Z"
+  },
+  {
+    "_id": "l181",
+    "title": "Cybersecurity Basics - Lesson 1",
+    "content": "This is the content for lesson 1 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 1,
+    "created_at": "2024-08-29T00:00:00Z"
+  },
+  {
+    "_id": "l182",
+    "title": "Cybersecurity Basics - Lesson 2",
+    "content": "This is the content for lesson 2 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 2,
+    "created_at": "2024-08-30T00:00:00Z"
+  },
+  {
+    "_id": "l183",
+    "title": "Cybersecurity Basics - Lesson 3",
+    "content": "This is the content for lesson 3 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 3,
+    "created_at": "2024-08-31T00:00:00Z"
+  },
+  {
+    "_id": "l184",
+    "title": "Cybersecurity Basics - Lesson 4",
+    "content": "This is the content for lesson 4 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 4,
+    "created_at": "2024-09-01T00:00:00Z"
+  },
+  {
+    "_id": "l185",
+    "title": "Cybersecurity Basics - Lesson 5",
+    "content": "This is the content for lesson 5 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 5,
+    "created_at": "2024-09-02T00:00:00Z"
+  },
+  {
+    "_id": "l186",
+    "title": "Cybersecurity Basics - Lesson 6",
+    "content": "This is the content for lesson 6 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 6,
+    "created_at": "2024-09-03T00:00:00Z"
+  },
+  {
+    "_id": "l187",
+    "title": "Cybersecurity Basics - Lesson 7",
+    "content": "This is the content for lesson 7 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 7,
+    "created_at": "2024-09-04T00:00:00Z"
+  },
+  {
+    "_id": "l188",
+    "title": "Cybersecurity Basics - Lesson 8",
+    "content": "This is the content for lesson 8 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 8,
+    "created_at": "2024-09-05T00:00:00Z"
+  },
+  {
+    "_id": "l189",
+    "title": "Cybersecurity Basics - Lesson 9",
+    "content": "This is the content for lesson 9 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 9,
+    "created_at": "2024-09-06T00:00:00Z"
+  },
+  {
+    "_id": "l190",
+    "title": "Cybersecurity Basics - Lesson 10",
+    "content": "This is the content for lesson 10 of Cybersecurity Basics.",
+    "course_id": "c19",
+    "order_number": 10,
+    "created_at": "2024-09-07T00:00:00Z"
+  },
+  {
+    "_id": "l191",
+    "title": "Cloud Computing Essentials - Lesson 1",
+    "content": "This is the content for lesson 1 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 1,
+    "created_at": "2024-09-08T00:00:00Z"
+  },
+  {
+    "_id": "l192",
+    "title": "Cloud Computing Essentials - Lesson 2",
+    "content": "This is the content for lesson 2 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 2,
+    "created_at": "2024-09-09T00:00:00Z"
+  },
+  {
+    "_id": "l193",
+    "title": "Cloud Computing Essentials - Lesson 3",
+    "content": "This is the content for lesson 3 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 3,
+    "created_at": "2024-09-10T00:00:00Z"
+  },
+  {
+    "_id": "l194",
+    "title": "Cloud Computing Essentials - Lesson 4",
+    "content": "This is the content for lesson 4 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 4,
+    "created_at": "2024-09-11T00:00:00Z"
+  },
+  {
+    "_id": "l195",
+    "title": "Cloud Computing Essentials - Lesson 5",
+    "content": "This is the content for lesson 5 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 5,
+    "created_at": "2024-09-12T00:00:00Z"
+  },
+  {
+    "_id": "l196",
+    "title": "Cloud Computing Essentials - Lesson 6",
+    "content": "This is the content for lesson 6 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 6,
+    "created_at": "2024-09-13T00:00:00Z"
+  },
+  {
+    "_id": "l197",
+    "title": "Cloud Computing Essentials - Lesson 7",
+    "content": "This is the content for lesson 7 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 7,
+    "created_at": "2024-09-14T00:00:00Z"
+  },
+  {
+    "_id": "l198",
+    "title": "Cloud Computing Essentials - Lesson 8",
+    "content": "This is the content for lesson 8 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 8,
+    "created_at": "2024-09-15T00:00:00Z"
+  },
+  {
+    "_id": "l199",
+    "title": "Cloud Computing Essentials - Lesson 9",
+    "content": "This is the content for lesson 9 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 9,
+    "created_at": "2024-09-16T00:00:00Z"
+  },
+  {
+    "_id": "l200",
+    "title": "Cloud Computing Essentials - Lesson 10",
+    "content": "This is the content for lesson 10 of Cloud Computing Essentials.",
+    "course_id": "c20",
+    "order_number": 10,
+    "created_at": "2024-09-17T00:00:00Z"
+  }
+]

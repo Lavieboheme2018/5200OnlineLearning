@@ -1,0 +1,167 @@
+[
+  {
+    "_id": "u1",
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "password": "hashed_password_1",
+    "role": "student",
+    "registered_at": "2024-03-01T10:00:00Z"
+  },
+  {
+    "_id": "u2",
+    "name": "Bob Smith",
+    "email": "bob@example.com",
+    "password": "hashed_password_2",
+    "role": "student",
+    "registered_at": "2024-03-03T11:20:00Z"
+  },
+  {
+    "_id": "u3",
+    "name": "Clara Lee",
+    "email": "clara@example.com",
+    "password": "hashed_password_3",
+    "role": "student",
+    "registered_at": "2024-03-05T09:45:00Z"
+  },
+  {
+    "_id": "u4",
+    "name": "David Kim",
+    "email": "david@example.com",
+    "password": "hashed_password_4",
+    "role": "student",
+    "registered_at": "2024-03-07T14:15:00Z"
+  },
+  {
+    "_id": "u5",
+    "name": "Ella Martinez",
+    "email": "ella@example.com",
+    "password": "hashed_password_5",
+    "role": "student",
+    "registered_at": "2024-03-10T08:10:00Z"
+  },
+  {
+    "_id": "u6",
+    "name": "Frank Zhang",
+    "email": "frank@example.com",
+    "password": "hashed_password_6",
+    "role": "student",
+    "registered_at": "2024-03-11T10:30:00Z"
+  },
+  {
+    "_id": "u7",
+    "name": "Grace Tan",
+    "email": "grace@example.com",
+    "password": "hashed_password_7",
+    "role": "student",
+    "registered_at": "2024-03-12T17:00:00Z"
+  },
+  {
+    "_id": "u8",
+    "name": "Henry Liu",
+    "email": "henry@example.com",
+    "password": "hashed_password_8",
+    "role": "student",
+    "registered_at": "2024-03-15T09:25:00Z"
+  },
+  {
+    "_id": "u9",
+    "name": "Isabella Wu",
+    "email": "isabella@example.com",
+    "password": "hashed_password_9",
+    "role": "student",
+    "registered_at": "2024-03-16T13:00:00Z"
+  },
+  {
+    "_id": "u10",
+    "name": "Jack Thomas",
+    "email": "jack@example.com",
+    "password": "hashed_password_10",
+    "role": "student",
+    "registered_at": "2024-03-17T15:45:00Z"
+  },
+  {
+    "_id": "u11",
+    "name": "Prof. Linda Green",
+    "email": "linda@university.edu",
+    "password": "hashed_password_11",
+    "role": "instructor",
+    "department": "Computer Science",
+    "registered_at": "2024-02-20T08:00:00Z"
+  },
+  {
+    "_id": "u12",
+    "name": "Dr. Michael Brown",
+    "email": "michael@university.edu",
+    "password": "hashed_password_12",
+    "role": "instructor",
+    "department": "Mathematics",
+    "registered_at": "2024-02-22T09:10:00Z"
+  },
+  {
+    "_id": "u13",
+    "name": "Dr. Nisha Patel",
+    "email": "nisha@university.edu",
+    "password": "hashed_password_13",
+    "role": "instructor",
+    "department": "Data Science",
+    "registered_at": "2024-02-25T14:00:00Z"
+  },
+  {
+    "_id": "u14",
+    "name": "Prof. Owen Walker",
+    "email": "owen@university.edu",
+    "password": "hashed_password_14",
+    "role": "instructor",
+    "department": "Physics",
+    "registered_at": "2024-02-27T16:20:00Z"
+  },
+  {
+    "_id": "u15",
+    "name": "Dr. Priya Singh",
+    "email": "priya@university.edu",
+    "password": "hashed_password_15",
+    "role": "instructor",
+    "department": "Chemistry",
+    "registered_at": "2024-02-28T10:40:00Z"
+  },
+  {
+    "_id": "u16",
+    "name": "Admin John Doe",
+    "email": "admin1@platform.com",
+    "password": "hashed_password_16",
+    "role": "admin",
+    "registered_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "_id": "u17",
+    "name": "Admin Jane Roe",
+    "email": "admin2@platform.com",
+    "password": "hashed_password_17",
+    "role": "admin",
+    "registered_at": "2024-01-03T12:00:00Z"
+  },
+  {
+    "_id": "u18",
+    "name": "Admin Mark Chan",
+    "email": "mark@platform.com",
+    "password": "hashed_password_18",
+    "role": "admin",
+    "registered_at": "2024-01-04T13:15:00Z"
+  },
+  {
+    "_id": "u19",
+    "name": "Admin Lisa Yang",
+    "email": "lisa@platform.com",
+    "password": "hashed_password_19",
+    "role": "admin",
+    "registered_at": "2024-01-06T14:00:00Z"
+  },
+  {
+    "_id": "u20",
+    "name": "Admin Tom Wilson",
+    "email": "tom@platform.com",
+    "password": "hashed_password_20",
+    "role": "admin",
+    "registered_at": "2024-01-08T08:30:00Z"
+  }
+]
