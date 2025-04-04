@@ -1,11 +1,11 @@
-const express = require('express');
-const {
+import express from 'express';
+import {
     createLesson,
     getLessons,
     getLesson,
     updateLesson,
     deleteLesson
-} = require('../controllers/lessonController.js');
+} from '../controllers/lessonController.js';
 
 router.post('/', createLesson);
 router.get('/', getLessons);

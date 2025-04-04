@@ -1,12 +1,11 @@
-const express = require('express');
-const {
-  createUser,
-  getUsers,
-  getUser,
-  updateUser,
-  deleteUser
-} = require('../controllers/userController');
-//Refactored from YC's code to use CommonJS syntax
+import express from 'express';
+import {
+    createUser,
+    getUsers,
+    getUser,
+    updateUser,
+    deleteUser
+} from '../controllers/userController.js';
 
 const router = express.Router();
 

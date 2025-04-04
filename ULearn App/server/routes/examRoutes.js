@@ -1,11 +1,11 @@
-const express = require('express');
-const {
+import express from 'express';
+import {
     createExam,
     getExams,
     getExam,
     updateExam,
     deleteExam
-} = require('../controllers/examController.js');
+} from '../controllers/examController.js';
 
 const router = express.Router();
 

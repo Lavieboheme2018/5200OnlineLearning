@@ -1,14 +1,11 @@
-const express = require('express');
-// Refactored from YC's code to use CommonJS syntax
-
-
-const {
+import express from 'express';
+import {
     createCourse,
     getCourses,
     getCourse,
     updateCourse,
     deleteCourse
-} = require('../controllers/courseController.js');
+} from '../controllers/courseController.js';
 
 const router = express.Router();
 
