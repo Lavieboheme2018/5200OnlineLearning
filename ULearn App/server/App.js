@@ -3,11 +3,12 @@ dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 
-const userRoutes = require('./routes/userRoutes.js');
-const courseRoutes = require('./routes/courseRoutes.js');
-const lessonRoutes = require('./routes/lessonRoutes.js');
-const examRoutes = require('./routes/examRoutes.js');
-const enrollmentRoutes = require('./routes/enrollmentRoutes.js');
+import userRoutes from './routes/userRoutes.js';
+import courseRoutes from './routes/courseRoutes.js';
+import lessonRoutes from './routes/lessonRoutes.js';
+import examRoutes from './routes/examRoutes.js';
+import enrollmentRoutes from './routes/enrollmentRoutes.js';
+
 
 const app = express();
 app.use(express.json());
