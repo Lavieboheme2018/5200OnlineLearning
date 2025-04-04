@@ -1,0 +1,162 @@
+[
+  {
+    "_id": "c1",
+    "title": "Introduction to Python",
+    "description": "Learn the basics of Python programming language.",
+    "instructor_id": "u11",
+    "category": "Programming",
+    "created_at": "2024-03-01T10:00:00Z"
+  },
+  {
+    "_id": "c2",
+    "title": "Data Structures in C++",
+    "description": "Understand core data structures using C++.",
+    "instructor_id": "u14",
+    "category": "Computer Science",
+    "created_at": "2024-03-02T14:30:00Z"
+  },
+  {
+    "_id": "c3",
+    "title": "Linear Algebra Essentials",
+    "description": "Master matrices, vectors, and linear transformations.",
+    "instructor_id": "u12",
+    "category": "Mathematics",
+    "created_at": "2024-03-03T11:20:00Z"
+  },
+  {
+    "_id": "c4",
+    "title": "Introduction to Data Science",
+    "description": "Explore the world of data analytics and visualization.",
+    "instructor_id": "u13",
+    "category": "Data Science",
+    "created_at": "2024-03-04T09:45:00Z"
+  },
+  {
+    "_id": "c5",
+    "title": "Object-Oriented Programming with Java",
+    "description": "Learn OOP principles through Java.",
+    "instructor_id": "u11",
+    "category": "Programming",
+    "created_at": "2024-03-05T14:15:00Z"
+  },
+  {
+    "_id": "c6",
+    "title": "Organic Chemistry I",
+    "description": "Understand the fundamentals of organic reactions.",
+    "instructor_id": "u15",
+    "category": "Chemistry",
+    "created_at": "2024-03-06T10:10:00Z"
+  },
+  {
+    "_id": "c7",
+    "title": "Calculus I",
+    "description": "Limits, derivatives, and basic integrals.",
+    "instructor_id": "u12",
+    "category": "Mathematics",
+    "created_at": "2024-03-07T16:00:00Z"
+  },
+  {
+    "_id": "c8",
+    "title": "Modern Physics",
+    "description": "An overview of quantum and relativistic physics.",
+    "instructor_id": "u14",
+    "category": "Physics",
+    "created_at": "2024-03-08T13:45:00Z"
+  },
+  {
+    "_id": "c9",
+    "title": "Data Visualization with Python",
+    "description": "Use matplotlib and seaborn to tell data stories.",
+    "instructor_id": "u13",
+    "category": "Data Science",
+    "created_at": "2024-03-09T11:00:00Z"
+  },
+  {
+    "_id": "c10",
+    "title": "Web Development Basics",
+    "description": "Learn HTML, CSS, and JavaScript to build websites.",
+    "instructor_id": "u11",
+    "category": "Web Development",
+    "created_at": "2024-03-10T10:00:00Z"
+  },
+  {
+    "_id": "c11",
+    "title": "Database Design",
+    "description": "Concepts of relational and NoSQL databases.",
+    "instructor_id": "u13",
+    "category": "Computer Science",
+    "created_at": "2024-03-11T09:00:00Z"
+  },
+  {
+    "_id": "c12",
+    "title": "Machine Learning 101",
+    "description": "Fundamentals of machine learning algorithms.",
+    "instructor_id": "u13",
+    "category": "Artificial Intelligence",
+    "created_at": "2024-03-12T11:30:00Z"
+  },
+  {
+    "_id": "c13",
+    "title": "Introduction to Algorithms",
+    "description": "Big-O notation, sorting, and searching algorithms.",
+    "instructor_id": "u11",
+    "category": "Computer Science",
+    "created_at": "2024-03-13T14:20:00Z"
+  },
+  {
+    "_id": "c14",
+    "title": "Network Fundamentals",
+    "description": "Basics of networking protocols and architectures.",
+    "instructor_id": "u14",
+    "category": "Computer Networks",
+    "created_at": "2024-03-14T10:50:00Z"
+  },
+  {
+    "_id": "c15",
+    "title": "JavaScript for Beginners",
+    "description": "Introduction to JS syntax and DOM manipulation.",
+    "instructor_id": "u11",
+    "category": "Programming",
+    "created_at": "2024-03-15T12:00:00Z"
+  },
+  {
+    "_id": "c16",
+    "title": "Advanced Python",
+    "description": "Decorators, generators, and async programming.",
+    "instructor_id": "u13",
+    "category": "Programming",
+    "created_at": "2024-03-16T11:00:00Z"
+  },
+  {
+    "_id": "c17",
+    "title": "Physical Chemistry",
+    "description": "Thermodynamics and quantum chemistry concepts.",
+    "instructor_id": "u15",
+    "category": "Chemistry",
+    "created_at": "2024-03-17T14:30:00Z"
+  },
+  {
+    "_id": "c18",
+    "title": "Statistics with R",
+    "description": "Data analysis and visualization using R.",
+    "instructor_id": "u13",
+    "category": "Data Science",
+    "created_at": "2024-03-18T09:40:00Z"
+  },
+  {
+    "_id": "c19",
+    "title": "Cybersecurity Basics",
+    "description": "Principles of information security and cryptography.",
+    "instructor_id": "u14",
+    "category": "Cybersecurity",
+    "created_at": "2024-03-19T15:10:00Z"
+  },
+  {
+    "_id": "c20",
+    "title": "Cloud Computing Essentials",
+    "description": "Introduction to AWS, Azure, and cloud architecture.",
+    "instructor_id": "u13",
+    "category": "Cloud",
+    "created_at": "2024-03-20T17:30:00Z"
+  }
+]
