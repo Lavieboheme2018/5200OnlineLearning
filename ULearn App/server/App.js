@@ -3,10 +3,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const userRoutes = require('./routes/userRoutes.js');
-const courseRoutes = require('./routes/courseRoutes');
-const lessonRoutes = require('./routes/lessonRoutes');
-const examRoutes = require('./routes/examRoutes');
-const enrollmentRoutes = require('./routes/enrollmentRoutes');
+const courseRoutes = require('./routes/courseRoutes.js');
+const lessonRoutes = require('./routes/lessonRoutes.js');
+const examRoutes = require('./routes/examRoutes.js');
+const enrollmentRoutes = require('./routes/enrollmentRoutes.js');
 
 const app = express();
 app.use(express.json());

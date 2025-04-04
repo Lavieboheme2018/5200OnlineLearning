@@ -1,11 +1,12 @@
-import express from 'express';
-import {
-    createUser,
-    getUsers,
-    getUser,
-    updateUser,
-    deleteUser
-} from '../controllers/userController.js';
+const express = require('express');
+const {
+  createUser,
+  getUsers,
+  getUser,
+  updateUser,
+  deleteUser
+} = require('../controllers/userController');
+//Refactored from YC's code to use CommonJS syntax
 
 const router = express.Router();
 
@@ -15,4 +16,4 @@ router.get('/:id', getUser);
 router.put('/:id', updateUser);
 router.delete('/:id', deleteUser);
 
-export default router;
+module.exports = router;

@@ -1,11 +1,11 @@
-import express from 'express';
-import {
+const express = require('express');
+const {
     createEnrollment,
     getEnrollments,
     getEnrollment,
     updateEnrollment,
     deleteEnrollment
-} from '../controllers/enrollmentController.js';
+} = require('../controllers/enrollmentController.js');
 
 const router = express.Router();
 

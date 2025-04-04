@@ -1,13 +1,11 @@
-import express from 'express';
-import {
+const express = require('express');
+const {
     createLesson,
     getLessons,
     getLesson,
     updateLesson,
     deleteLesson
-} from '../controllers/lessonController.js';
-
-const router = express.Router();
+} = require('../controllers/lessonController.js');
 
 router.post('/', createLesson);
 router.get('/', getLessons);
