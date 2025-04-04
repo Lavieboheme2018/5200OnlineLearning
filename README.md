@@ -46,7 +46,6 @@ This project is a web-based **online learning system** powered by **MongoDB**. I
 1. **Clone the repo**
 ```bash
 git clone https://github.com/lavieboheme2018/5200OnlineLearning.git
-cd 5200OnlineLearning/backend
 ```
 
 2. **Install dependencies**
