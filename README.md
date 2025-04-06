@@ -62,7 +62,7 @@ JWT_SECRET=your_jwt_secret
 
 4. **Run the server**
 ```bash
-node server.js
+node App.js
 ```
 
 5. **dependencies**
