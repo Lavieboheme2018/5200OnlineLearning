@@ -1,35 +1,35 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const examSchema = new mongoose.Schema({
   _id: {
-    type: mongoose.Schema.Types.ObjectId,
-    auto: true
+    type: String,
+    required: true,
   },
   course_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Course',
-    required: true
+    type: String,
+    ref: "Course",
+    required: true,
   },
   title: {
     type: String,
-    required: true
+    required: true,
   },
   start_time: {
     type: Date,
-    required: true
+    required: true,
   },
   duration_minutes: {
     type: Number,
-    required: true
+    required: true,
   },
   questions: [
     {
       text: { type: String, required: true },
       options: [{ type: String, required: true }],
-      correct_answer: { type: String, required: true }
-    }
-  ]
+      correct_answer: { type: String, required: true },
+    },
+  ],
 });
 
-const Exam = mongoose.model('Exam', examSchema);
+const Exam = mongoose.model("Exam", examSchema);
 export default Exam;
