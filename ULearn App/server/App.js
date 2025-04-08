@@ -9,6 +9,8 @@ import lessonRoutes from "./routes/lessonRoutes.js";
 import examRoutes from "./routes/examRoutes.js";
 import enrollmentRoutes from "./routes/enrollmentRoutes.js";
 import authRoutes from "./routes/authRoutes.js"; // Import authRoutes
+import assignmentRoutes from "./routes/assignmentRoutes.js"; // Import assignment routes
+import submissionRoutes from "./routes/submissionRoutes.js"; // Import submission routes
 
 const app = express();
 app.use(express.json());
@@ -26,6 +28,8 @@ app.use("/api/courses", courseRoutes);
 app.use("/api/lessons", lessonRoutes);
 app.use("/api/exams", examRoutes);
 app.use("/api/enrollments", enrollmentRoutes);
+app.use("/api/assignments", assignmentRoutes); // Add assignment routes
+app.use("/api/submissions", submissionRoutes); // Add submission routes
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
