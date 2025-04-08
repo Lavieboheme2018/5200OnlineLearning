@@ -63,3 +63,91 @@ export const deleteCourse = async (req, res) => {
     res.status(500).json({ error: error.message }); // Handle errors and respond with a 500 status
   }
 };
+
+// Get student counts for each course
+export const getCourseStudentCounts = async (req, res) => {
+  try {
+    const result = await Enrollment.aggregate([
+      {
+        $group: {
+          _id: "$course_id", // Group by course_id
+          studentCount: { $sum: 1 }, // Count the number of students
+        },
+      },
+      {
+        $lookup: {
+          from: "courses", // Join with the courses collection
+          localField: "_id",
+          foreignField: "_id",
+          as: "courseDetails",
+        },
+      },
+      {
+        $unwind: "$courseDetails", // Unwind the course details
+      },
+      {
+        $project: {
+          _id: 0,
+          courseId: "$_id",
+          courseTitle: "$courseDetails.title",
+          studentCount: 1,
+        },
+      },
+      {
+        $sort: { studentCount: -1 }, // Sort by student count in descending order
+      },
+    ]);
+
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Get average grades for each course
+export const getCourseAverageGrades = async (req, res) => {
+  try {
+    const result = await Submission.aggregate([
+      {
+        $lookup: {
+          from: "assignments", // Join with the assignments collection
+          localField: "assignment_id",
+          foreignField: "_id",
+          as: "assignmentDetails",
+        },
+      },
+      {
+        $unwind: "$assignmentDetails", // Unwind the assignment details
+      },
+      {
+        $group: {
+          _id: "$assignmentDetails.course_id", // Group by course_id
+          averageGrade: { $avg: "$grade" }, // Calculate the average grade
+        },
+      },
+      {
+        $lookup: {
+          from: "courses", // Join with the courses collection
+          localField: "_id",
+          foreignField: "_id",
+          as: "courseDetails",
+        },
+      },
+      {
+        $unwind: "$courseDetails", // Unwind the course details
+      },
+      {
+        $project: {
+          _id: 0,
+          courseId: "$_id",
+          courseTitle: "$courseDetails.title",
+          averageGrade: { $round: ["$averageGrade", 2] }, // Round to 2 decimal places
+        },
+      },
+    ]);
+
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};

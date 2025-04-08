@@ -84,3 +84,43 @@ export const deleteUser = async (req, res) => {
     res.status(500).json({ error: err.message }); // Respond with an error
   }
 };
+
+// Get the number of courses created by each instructor
+export const getInstructorCourseCounts = async (req, res) => {
+  try {
+    const result = await Course.aggregate([
+      {
+        $group: {
+          _id: "$instructor_id", // Group by instructor_id
+          courseCount: { $sum: 1 }, // Count the number of courses
+        },
+      },
+      {
+        $lookup: {
+          from: "users", // Join with the users collection
+          localField: "_id",
+          foreignField: "_id",
+          as: "instructorDetails",
+        },
+      },
+      {
+        $unwind: "$instructorDetails", // Unwind the instructor details
+      },
+      {
+        $project: {
+          _id: 0,
+          instructorId: "$_id",
+          instructorName: "$instructorDetails.name",
+          courseCount: 1,
+        },
+      },
+      {
+        $sort: { courseCount: -1 }, // Sort by course count in descending order
+      },
+    ]);
+
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
