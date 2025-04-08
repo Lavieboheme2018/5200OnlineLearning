@@ -94,6 +94,12 @@ Server should start on `http://localhost:3000`
 
 ---
 
+## 📦 Sample Data
+
+Sample `.json` files are available under `dataSamples/` and can be imported into MongoDB.
+
+---
+
 ## 📑 API Endpoints and CRUD Explanations
 
 ### **Authentication**
@@ -146,12 +152,6 @@ Server should start on `http://localhost:3000`
 - **GET /api/submissions**: Retrieve all submissions (Instructors or Admin only).
 - **GET /api/submissions/:id**: Retrieve a specific submission by ID.
 - **PUT /api/submissions/:id/grade**: Grade a submission (Instructors or Admin only).
-
----
-
-## 📦 Sample Data
-
-Sample `.json` files are available under `dataSamples/` and can be imported into MongoDB.
 
 ---
 
