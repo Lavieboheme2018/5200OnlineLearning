@@ -94,6 +94,8 @@ Server should start on `http://localhost:3000`
 
 ---
 
+7. **Run the frontend**
+
 ## 📦 Sample Data
 
 Sample `.json` files are available under `dataSamples/` and can be imported into MongoDB.
