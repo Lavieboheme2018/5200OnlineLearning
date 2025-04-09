@@ -63,16 +63,10 @@ npm install
 
 ```bash
 MONGODB_URI=mongodb://localhost:27017/onlinelearning
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=My$3cureJWT!Key#2025
 ```
 
-4. **Run the server**
-
-```bash
-node App.js
-```
-
-5. **Install additional dependencies**
+4. **Install additional dependencies**
 
 ```bash
 npm install dotenv
@@ -80,6 +74,12 @@ npm install express
 npm install mongoose
 npm install bcryptjs
 npm install jsonwebtoken
+```
+
+5. **Run the server**
+
+```bash
+node App.js
 ```
 
 6. **Authentication Setup**
@@ -271,6 +271,71 @@ This project implements **5 complex aggregation queries** using MongoDB's aggreg
     }
   ]
   ```
+
+---
+
+## 🛠️ How to Create a User
+
+### 1. Use the `POST /api/auth/signup` Endpoint
+
+- To create a new user, use the `POST /api/auth/signup` endpoint.
+- **NOTE**: Set role to "admin" if you want to get access to all the endpoints.
+- Example request body:
+  ```json
+  {
+    "name": "Alice Smith",
+    "email": "alicesmith@example.com",
+    "password": "securepassword123",
+    "role": "admin"
+  }
+  ```
+- **Roles**:
+
+  - `admin`: Full access to all resources.
+  - `instructor`: Can manage courses, lessons, and assignments.
+  - `student`: Can enroll in courses, submit assignments, and take exams.
+
+- Example response:
+  ```json
+  {
+    "message": "User registered successfully"
+  }
+  ```
+
+---
+
+## 🔑 How to Test Authentication in Postman
+
+### 1. Log In to Get a Token
+
+- Use the `POST /api/auth/login` endpoint to log in with valid credentials.
+- Example request body:
+  ```json
+  {
+    "email": "alicesmith@example.com",
+    "password": "securepassword123"
+  }
+  ```
+- The server will respond with a token. Example response:
+  ```json
+  {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzQyYjYzYzE2YzQyMDAxNzYzYzE2ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDg5NjAwMCwiZXhwIjoxNjgwOTgyNDAwfQ.abc123xyz456"
+  }
+  ```
+
+### 2. Set the Authorization Header
+
+- In Postman, create a new request for a protected endpoint (e.g., `GET /api/users`).
+- Go to the **Headers** tab and add the following header:
+  - **Key**: `Authorization`
+  - **Value**: `Bearer <your_token>`
+- **Important**: Ensure there is a **space** between `Bearer` and `<your_token>`.
+- Replace `<your_token>` with the actual token you received from the login response.
+
+### 3. Send the Request
+
+- Click the **Send** button to make the request.
+- If the token is valid and the user has the required permissions, you should receive a successful response (e.g., HTTP status `200 OK`).
 
 ---
 
