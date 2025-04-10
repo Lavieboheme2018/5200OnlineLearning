@@ -4,7 +4,6 @@ import './Home.css';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import CourseList from '../components/CourseList';
 
 function Home() {
   return (
@@ -21,8 +20,7 @@ function Home() {
       </div>
 
       <div className="home-courses-section">
-        <h2>Explore Featured Courses</h2>
-        <CourseList />
+        <Link to="/courses" className="btn btn-view-all">View All Courses</Link>
       </div>
 
       <Footer />
