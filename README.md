@@ -98,7 +98,7 @@ Server should start on `http://localhost:3000`
 ```bash
 cd client
 npm install
-npm run
+npm start
 ```
 
 ## 📦 Sample Data
