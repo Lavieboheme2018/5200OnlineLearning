@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "s1",
+    "assignment_id": "a1",
+    "student_id": "u21",
+    "submitted_at": "2024-03-10T15:30:00Z",
+    "file_url": "https://example.com/submissions/python_basics_s1.pdf",
+    "grade": 85,
+    "feedback": "Good work, but improve variable naming."
+  },
+  {
+    "_id": "s2",
+    "assignment_id": "a2",
+    "student_id": "u22",
+    "submitted_at": "2024-03-18T12:00:00Z",
+    "file_url": "https://example.com/submissions/cpp_data_structures_s2.pdf",
+    "grade": 90,
+    "feedback": "Excellent implementation of binary trees."
+  },
+  {
+    "_id": "s3",
+    "assignment_id": "a3",
+    "student_id": "u23",
+    "submitted_at": "2024-03-20T10:45:00Z",
+    "file_url": "https://example.com/submissions/linear_algebra_s3.pdf",
+    "grade": null,
+    "feedback": null
+  },
+  {
+    "_id": "s4",
+    "assignment_id": "a4",
+    "student_id": "u24",
+    "submitted_at": "2024-03-25T09:00:00Z",
+    "file_url": "https://example.com/submissions/data_science_project_s4.pdf",
+    "grade": 78,
+    "feedback": "Good analysis, but visualizations need improvement."
+  }
+]
