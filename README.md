@@ -22,27 +22,10 @@ This project is a web-based **online learning system** powered by **MongoDB**. I
 - **Backend**: Node.js, Express
 - **Database**: MongoDB with Mongoose ODM
 - **Authentication**: JSON Web Tokens (JWT)
-- **Others**: dotenv, body-parser, etc.
-
----
-
-## 📁 Folder Structure
-
-```
-/project-root
-├── backend/
-│   ├── models/            # Mongoose schema definitions
-│   ├── routes/            # API route handlers
-│   ├── controllers/       # CRUD and logic
-│   ├── middleware/        # Authentication middleware
-│   ├── data/              # Sample JSON data (users, courses, etc.)
-│   └── server.js          # Main entry point
-├── frontend/              # (Optional) simple UI for demo/testing
-├── README.md              # This file
-└── documentation.pdf      # PDF report (schema, samples, diagrams)
-```
-
----
+- **Frontend**: React with React Router
+- **Styling**: CSS Modules, custom styles
+- **Testing**: Jest, React Testing Library
+- **Others**: dotenv, bcryptjs, axios, body-parser, etc.
 
 ## 🛠️ Setup & Run
 
@@ -95,6 +78,7 @@ Server should start on `http://localhost:3000`
 ---
 
 7. **Run the frontend**
+
 ```bash
 cd client
 npm install
