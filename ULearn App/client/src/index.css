@@ -1,11 +1,29 @@
-/* Global Reset */
+/* ----------------------------------------
+   CSS Variables: Define App Color Palette
+------------------------------------------- */
+:root {
+  --color-primary: #3f87a6;
+  --color-primary-dark: #2e6787;
+  --color-secondary: #ebf8e1;
+  --color-secondary-dark: #d9f2c4;
+  --color-accent: #f0ad4e;
+  --color-success: #4caf50;
+  --color-danger: #e74c3c;
+  --color-light: #ffffff;
+  --color-dark: #333333;
+  --color-muted: #777777;
+  --color-background: #f5f6fa;
+}
+
+/* ----------------------------------------
+   Global Reset & Base Styles
+------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base Fonts */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,12 +31,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f6fa;
-  color: #333;
+  background-color: var(--color-background);
+  color: var(--color-dark);
   line-height: 1.6;
 }
 
-/* Code Fonts */
+/* Code Blocks */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -26,19 +44,19 @@ code {
 
 /* Headings */
 h1, h2, h3, h4 {
-  color: #3f87a6;
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
 /* Links */
 a {
-  color: #3f87a6;
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #2e6787;
+  color: var(--color-primary-dark);
 }
 
 /* Buttons */
@@ -54,32 +72,31 @@ button, .btn {
 }
 
 .btn-primary {
-  background-color: #3f87a6;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-light);
 }
 
 .btn-primary:hover {
-  background-color: #2e6787;
+  background-color: var(--color-primary-dark);
 }
 
 .btn-secondary {
-  background-color: #ebf8e1;
-  color: #3f87a6;
-  border: 1px solid #3f87a6;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
-  background-color: #d9f2c4;
+  background-color: var(--color-secondary-dark);
 }
 
-/* Container & Layout */
+/* Layout & Containers */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Section Styles */
 section {
   padding: 2rem;
 }
@@ -92,14 +109,14 @@ section {
 
 /* Cards */
 .card {
-  background: white;
+  background: var(--color-light);
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   margin: 1rem 0;
 }
 
-/* Grid layout for course lists or dashboards */
+/* Grid layout */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -110,10 +127,8 @@ section {
   flex: 1 1 300px;
 }
 
-/* Utilities */
-.text-center {
-  text-align: center;
-}
+/* Utility Classes */
+.text-center { text-align: center; }
 
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
