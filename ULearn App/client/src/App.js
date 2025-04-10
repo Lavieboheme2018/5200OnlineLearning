@@ -19,9 +19,17 @@ function App() {
 
   // Simulated authentication (you’d typically verify token and fetch user data)
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem('ulearn_user'));
-    if (storedUser) setUser(storedUser);
+    const storedUser = localStorage.getItem('ulearn_user');
+    if (storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setUser(parsedUser);
+      } catch (error) {
+        console.error("Error parsing user data from localStorage", error);
+      }
+    }
   }, []);
+  
 
   const PrivateRoute = ({ children, role }) => {
     if (!user) return <Navigate to="/login" />;
