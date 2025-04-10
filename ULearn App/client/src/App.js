@@ -9,7 +9,7 @@ import StudentDashboard from './pages/student/StudentDashboard';
 import InstructorDashboard from './pages/instructor/InstructorDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
-// import CoursePage from './pages/CoursePage';
+import CoursePage from './pages/CoursePage';
 
 
 function App() {
@@ -70,8 +70,6 @@ function App() {
             </PrivateRoute>
           }
         />
-
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
