@@ -4,15 +4,15 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import CourseList from './pages/CourseList';
 
 import StudentDashboard from './pages/student/StudentDashboard';
 import InstructorDashboard from './pages/instructor/InstructorDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
 import CoursePage from './pages/CoursePage';
-import NotFound from './pages/NotFound';
-
 import Navbar from './components/Navbar';
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -62,7 +62,7 @@ function App() {
             </PrivateRoute>
           }
         />
-
+        <Route path="/courses" element={<CourseList />} />
         {/* Shared course route */}
         <Route
           path="/courses/:id"
@@ -72,8 +72,6 @@ function App() {
             </PrivateRoute>
           }
         />
-
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
