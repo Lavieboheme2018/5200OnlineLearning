@@ -14,7 +14,7 @@ const CourseList = () => {
 
   return (
     <section className="courses-section">
-      <h3>Featured Courses</h3>
+      <h3>Browse Courses</h3>
       <div className="course-grid">
         {courses.map((course, index) => (
           <div key={index} className="course-card">
