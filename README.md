@@ -24,7 +24,6 @@ This project is a web-based **online learning system** powered by **MongoDB**. I
 - **Authentication**: JSON Web Tokens (JWT)
 - **Frontend**: React with React Router
 - **Styling**: CSS Modules, custom styles
-- **Testing**: Jest, React Testing Library
 - **Others**: dotenv, bcryptjs, axios, body-parser, etc.
 
 ## 🛠️ Setup & Run
