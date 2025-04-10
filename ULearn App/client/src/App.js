@@ -9,10 +9,8 @@ import StudentDashboard from './pages/student/StudentDashboard';
 import InstructorDashboard from './pages/instructor/InstructorDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
-import CoursePage from './pages/CoursePage';
-import NotFound from './pages/NotFound';
+// import CoursePage from './pages/CoursePage';
 
-import Navbar from './components/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);

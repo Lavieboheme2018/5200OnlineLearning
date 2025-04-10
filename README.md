@@ -95,6 +95,11 @@ Server should start on `http://localhost:3000`
 ---
 
 7. **Run the frontend**
+```bash
+cd client
+npm install
+npm run
+```
 
 ## 📦 Sample Data
 
