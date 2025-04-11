@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 
 import userRoutes from "./routes/userRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js";
@@ -11,6 +12,12 @@ import enrollmentRoutes from "./routes/enrollmentRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import assignmentRoutes from "./routes/assignmentRoutes.js";
 import submissionRoutes from "./routes/submissionRoutes.js";
+
+// Enable CORS
+app.use(cors({
+  origin: 'http://localhost:3001',
+  credentials: true
+}));
 
 const app = express();
 app.use(express.json());
