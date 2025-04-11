@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import CourseList from './pages/CourseList';
+import Home from './src/pages/Home';
+import Login from './src/pages/Login';
+import Register from './src/pages/Register';
+import CourseList from './src/pages/CourseList';
 
-import StudentDashboard from './pages/student/StudentDashboard';
-import InstructorDashboard from './pages/instructor/InstructorDashboard';
-import AdminDashboard from './pages/admin/AdminDashboard';
+import StudentDashboard from './src/pages/student/StudentDashboard';
+import InstructorDashboard from './src/pages/instructor/InstructorDashboard';
+import AdminDashboard from './src/pages/admin/AdminDashboard';
 
-import CoursePage from './pages/CoursePage';
-import Navbar from './components/Navbar';
+import CoursePage from './src/pages/CoursePage';
+import Navbar from './src/components/Navbar';
 
 
 function App() {
