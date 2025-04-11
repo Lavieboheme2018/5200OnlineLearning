@@ -11,13 +11,11 @@ import InstructorDashboard from './pages/instructor/InstructorDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
 import CoursePage from './pages/CoursePage';
-import Navbar from './components/Navbar';
-
+import Header from './components/Header'; // Uses Header which includes Navbar
 
 function App() {
   const [user, setUser] = useState(null);
 
-  // Simulated authentication (you’d typically verify token and fetch user data)
   useEffect(() => {
     const storedUser = localStorage.getItem('ulearn_user');
     if (storedUser) {
@@ -29,7 +27,6 @@ function App() {
       }
     }
   }, []);
-  
 
   const PrivateRoute = ({ children, role }) => {
     if (!user) return <Navigate to="/login" />;
@@ -39,13 +36,21 @@ function App() {
 
   return (
     <Router>
-      <Navbar user={user} setUser={setUser} />
+      <Header user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
-
-        {/* Role-based dashboards */}
+        <Route path="/courses" element={<CourseList />} />
+        
+        <Route
+          path="/courses/:id"
+          element={
+            <PrivateRoute>
+              <CoursePage user={user} />
+            </PrivateRoute>
+          }
+        />
         <Route
           path="/student/dashboard"
           element={
@@ -67,16 +72,6 @@ function App() {
           element={
             <PrivateRoute role="admin">
               <AdminDashboard user={user} />
-            </PrivateRoute>
-          }
-        />
-        <Route path="/courses" element={<CourseList />} />
-        {/* Shared course route */}
-        <Route
-          path="/courses/:id"
-          element={
-            <PrivateRoute>
-              <CoursePage user={user} />
             </PrivateRoute>
           }
         />
