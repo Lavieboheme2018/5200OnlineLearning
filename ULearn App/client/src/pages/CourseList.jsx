@@ -9,7 +9,7 @@ const CourseList = () => {
     const fetchCourses = async () => {
       try {
         const token = localStorage.getItem("token"); 
-        
+
         const res = await fetch("/api/courses", {
           headers: {
             "Content-Type": "application/json",
@@ -18,6 +18,7 @@ const CourseList = () => {
         });
 
         if (!res.ok) throw new Error("Network response was not ok");
+        if (res.ok) console.log("Response OK");
 
         const data = await res.json();
         setCourses(data);
