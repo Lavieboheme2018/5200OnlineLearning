@@ -65,6 +65,7 @@ try {
 1. **Successful Transaction:** Creating a lesson with valid data results in a new lesson being saved to the database.
 2. **Rollback on Failure:** Attempting to delete a non-existent assignment triggers a rollback, ensuring no unintended changes are made.
 
+
 ---
 
 ## 2. **Role-Based Access Control (RBAC) & Security**
@@ -220,6 +221,13 @@ Screenshot:
 1. **Successful Transaction:** Creating a lesson with valid data results in a new lesson being saved to the database.
 2. **Rollback on Failure:** Attempting to delete a non-existent assignment triggers a rollback, ensuring no unintended changes are made.
 
+### **Comparing MongoDB vs. RDBMS**
+1. Data Model: 
+MongoDB offers greater flexibility while encouraging normalization. It uses documents (BSON/JSON) inside collections.
+RDBMS like MySQL uses tables, rows, and relationships.
+2. ACID Compliance
+RDBMS: Full ACID compliance is standard and robust.
+MongoDB supports multi-document ACID transactions, but it’s newer and less performant compared to RDBMS.
 ---
 
 ## 2. **Role-Based Access Control (RBAC) & Security**
