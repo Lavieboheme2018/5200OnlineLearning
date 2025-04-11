@@ -6,13 +6,27 @@ const CourseList = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch("/api/courses") // Make sure proxy is set and backend is running
-      .then((res) => {
+    const fetchCourses = async () => {
+      try {
+        const token = localStorage.getItem("token"); 
+        
+        const res = await fetch("/api/courses", {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
         if (!res.ok) throw new Error("Network response was not ok");
-        return res.json();
-      })
-      .then((data) => setCourses(data))
-      .catch((err) => console.error("Failed to fetch courses:", err));
+
+        const data = await res.json();
+        setCourses(data);
+      } catch (err) {
+        console.error("Failed to fetch courses:", err);
+      }
+    };
+
+    fetchCourses();
   }, []);
 
   return (
