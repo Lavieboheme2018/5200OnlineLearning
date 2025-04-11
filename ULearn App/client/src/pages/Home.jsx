@@ -1,27 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function Home() {
   return (
     <div className="home-page">
-      <Header />
-
-      <div className="home-hero">
-        <h1>Welcome to ULearn</h1>
-        <p>Your journey to smarter learning starts here.</p>
-        <div className="home-buttons">
+      <section className="home-hero">
+        <h1 className="home-title">Welcome to ULearn</h1>
+        <p className="home-subtitle">Your journey to smarter learning starts here.</p>
+        <div className="home-actions">
           <Link to="/login" className="btn btn-login">Login</Link>
           <Link to="/register" className="btn btn-register">Register</Link>
         </div>
-      </div>
+      </section>
 
-      <div className="home-courses-section">
+      <section className="home-courses">
         <Link to="/courses" className="btn btn-view-all">View All Courses</Link>
-      </div>
+      </section>
 
       <Footer />
     </div>
