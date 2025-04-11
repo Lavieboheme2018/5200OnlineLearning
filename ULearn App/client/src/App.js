@@ -1,48 +1,55 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
+// Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import CourseList from './pages/CourseList';
+import CoursePage from './pages/CoursePage';
 
+// Dashboards
 import StudentDashboard from './pages/student/StudentDashboard';
 import InstructorDashboard from './pages/instructor/InstructorDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
-import CoursePage from './pages/CoursePage';
-import Header from './components/Header'; // Uses Header which includes Navbar
+// Components
+import Navbar from './components/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);
 
+  // Load user from localStorage on mount
   useEffect(() => {
-    const storedUser = localStorage.getItem('ulearn_user');
-    if (storedUser) {
-      try {
-        const parsedUser = JSON.parse(storedUser);
-        setUser(parsedUser);
-      } catch (error) {
-        console.error("Error parsing user data from localStorage", error);
+    try {
+      const storedUser = localStorage.getItem('ulearn_user');
+      if (storedUser) {
+        setUser(JSON.parse(storedUser));
       }
+    } catch (error) {
+      console.error('Error parsing user data from localStorage:', error);
     }
   }, []);
 
-  const PrivateRoute = ({ children, role }) => {
+  // PrivateRoute component to protect routes based on login and role
+  const PrivateRoute = useCallback(({ children, role }) => {
     if (!user) return <Navigate to="/login" />;
     if (role && user.role !== role) return <Navigate to="/" />;
     return children;
-  };
+  }, [user]);
 
   return (
     <Router>
-      <Header user={user} setUser={setUser} />
+      <Navbar user={user} setUser={setUser} />
+
       <Routes>
+        {/* Public routes */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<CourseList />} />
-        
+
+        {/* Protected course route */}
         <Route
           path="/courses/:id"
           element={
@@ -51,6 +58,8 @@ function App() {
             </PrivateRoute>
           }
         />
+
+        {/* Role-based dashboards */}
         <Route
           path="/student/dashboard"
           element={
@@ -81,3 +90,4 @@ function App() {
 }
 
 export default App;
+
