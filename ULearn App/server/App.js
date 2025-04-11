@@ -13,14 +13,15 @@ import authRoutes from "./routes/authRoutes.js";
 import assignmentRoutes from "./routes/assignmentRoutes.js";
 import submissionRoutes from "./routes/submissionRoutes.js";
 
+
+const app = express();
+app.use(express.json());
+
 // Enable CORS
 app.use(cors({
   origin: 'http://localhost:3001',
   credentials: true
 }));
-
-const app = express();
-app.use(express.json());
 
 // Routes (register first, but they won’t be triggered until server starts)
 app.use("/api/auth", authRoutes);
