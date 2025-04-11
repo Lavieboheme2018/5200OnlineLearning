@@ -1,12 +1,10 @@
-// Header.jsx
 import React from "react";
 import Navbar from "./Navbar";
+import './Header.css'; // Optional if you need extra styling
 
 const Header = ({ user, setUser }) => {
   return (
-    <header className="header-container">
-      <Navbar user={user} setUser={setUser} />
-    </header>
+    <Navbar user={user} setUser={setUser} />
   );
 };
 
