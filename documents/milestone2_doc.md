@@ -211,7 +211,7 @@ Rollback mechanism: If the assignment is not found or an error occurs, abortTran
 Session Cleanup:	```session.endSession()``` is called in both success and failure branches to release resources.
 
 Screenshot:
-![Failed Transaction for Deleting Assignment](./test_success_lessons.png)
+![Failed Transaction for Deleting Assignment](./failed_assignment_deletion.png)
 
 ### **Test Cases**
 
