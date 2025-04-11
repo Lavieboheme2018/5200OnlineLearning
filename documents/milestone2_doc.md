@@ -157,6 +157,19 @@ try {
 }
 ```
 
+Begining of transaction:
+```javascript
+session.startTransaction();
+```
+End of transaction:
+```javascript
+await session.commitTransaction();
+```
+The Lesson collection is affected. A new Lesson document is inserted using the session.
+
+Screenshot:
+![Successful Transaction for Creating Lesson](./test_success_lessons.png)
+
 #### Rollback on Failure
 
 In the `deleteAssignment` function:
@@ -183,6 +196,22 @@ try {
   res.status(500).json({ error: error.message });
 }
 ```
+Begining of transaction:
+```javascript
+session.startTransaction();
+```
+End of transaction:
+```javascript
+session.abortTransaction();
+```
+(when transaction unsuccessful)
+The Assignment collection is affected. Single document deletion.
+
+Rollback mechanism: If the assignment is not found or an error occurs, abortTransaction() is called.
+Session Cleanup:	```session.endSession()``` is called in both success and failure branches to release resources.
+
+Screenshot:
+![Failed Transaction for Deleting Assignment](./test_success_lessons.png)
 
 ### **Test Cases**
 
