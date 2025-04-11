@@ -172,29 +172,31 @@ Screenshot:
 
 #### Rollback on Failure
 
-In the `deleteAssignment` function:
-
+In the `createAssignment` function:
 ```javascript
-const session = await mongoose.startSession();
-session.startTransaction();
+export const createAssignment = async (req, res) => {
+  const session = await mongoose.startSession();
+  session.startTransaction();
 
-try {
-  const assignment = await Assignment.findByIdAndDelete(req.params.id, {
-    session,
-  });
-  if (!assignment) {
+  try {
+    const assignment = new Assignment(req.body);
+
+    // Save the assignment within the transaction
+    await assignment.save({ session });
+
+    // Commit the transaction
+    await session.commitTransaction();
+    session.endSession();
+
+    res.status(201).json(assignment);
+  } catch (error) {
+    // Abort the transaction in case of an error
     await session.abortTransaction();
     session.endSession();
-    return res.status(404).json({ message: "Assignment not found" });
+
+    res.status(400).json({ error: error.message });
   }
-  await session.commitTransaction();
-  session.endSession();
-  res.json({ message: "Assignment deleted successfully" });
-} catch (error) {
-  await session.abortTransaction();
-  session.endSession();
-  res.status(500).json({ error: error.message });
-}
+};
 ```
 Begining of transaction:
 ```javascript
@@ -205,13 +207,13 @@ End of transaction:
 session.abortTransaction();
 ```
 (when transaction unsuccessful)
-The Assignment collection is affected. Single document deletion.
+The Assignment collection is affected. Single document created.
 
-Rollback mechanism: If the assignment is not found or an error occurs, abortTransaction() is called.
+Rollback mechanism: If the assignment is not found or an error occurs, ```abortTransaction()``` is called.
 Session Cleanup:	```session.endSession()``` is called in both success and failure branches to release resources.
 
 Screenshot:
-![Failed Transaction for Deleting Assignment](./failed_assignment_deletion.png)
+![Failed Transaction for creating Assignment](./test_failed_assignment.png)
 
 ### **Test Cases**
 
