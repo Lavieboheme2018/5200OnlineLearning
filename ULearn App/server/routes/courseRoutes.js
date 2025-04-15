@@ -6,6 +6,7 @@ import {
   deleteCourse,
   getCourseStudentCounts,
   getCourseAverageGrades, // Import the new function
+  getCourseRevenue, // Import the new function
 } from "../controllers/courseController.js";
 import {
   authMiddleware,
@@ -50,6 +51,14 @@ router.get(
   authMiddleware,
   roleMiddleware(["admin", "instructor"]), // Only admins and instructors can access this
   getCourseAverageGrades
+);
+
+// Add a new route for getting course revenue
+router.get(
+  "/course-revenue",
+  authMiddleware,
+  roleMiddleware(["admin", "instructor"]), // Only admins and instructors can access this
+  getCourseRevenue
 );
 
 export default router;
