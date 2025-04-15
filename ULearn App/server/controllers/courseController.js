@@ -3,7 +3,14 @@ import Course from "../models/courseModel.js";
 // Create a new course
 export const createCourse = async (req, res) => {
   try {
-    const course = new Course(req.body); // Create a new course instance with the request body
+    const { title, description, category, instructor_id } = req.body;
+
+    // Validate required fields
+    if (!title || !description || !category || !instructor_id) {
+      return res.status(400).json({ error: "All fields are required" });
+    }
+
+    const course = new Course(req.body); // Create a new course instance
     await course.save(); // Save the course to the database
     res.status(201).json(course); // Respond with the created course
   } catch (error) {
