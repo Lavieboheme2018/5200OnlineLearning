@@ -3,19 +3,26 @@ import User from "../models/userModel.js";
 
 // Create a new user with ACID transaction
 export const createUser = async (req, res) => {
-  const session = await mongoose.startSession(); // Start a session
-  session.startTransaction(); // Begin a transaction
+  const session = await mongoose.startSession();
+  session.startTransaction();
 
   try {
-    const user = new User(req.body); // Create a new user instance
-    await user.save({ session }); // Save the user within the transaction
-    await session.commitTransaction(); // Commit the transaction
-    session.endSession(); // End the session
-    res.status(201).json(user); // Respond with the created user
+    const { role } = req.body;
+    const permissions = {
+      admin: ["manage_users", "manage_courses", "manage_assignments"],
+      instructor: ["manage_courses", "manage_assignments"],
+      student: ["enroll_courses", "submit_assignments"],
+    };
+
+    const user = new User({ ...req.body, permissions: permissions[role] });
+    await user.save({ session });
+    await session.commitTransaction();
+    session.endSession();
+    res.status(201).json(user);
   } catch (err) {
-    await session.abortTransaction(); // Roll back the transaction in case of an error
-    session.endSession(); // End the session
-    res.status(400).json({ error: err.message }); // Respond with an error
+    await session.abortTransaction();
+    session.endSession();
+    res.status(400).json({ error: err.message });
   }
 };
 
