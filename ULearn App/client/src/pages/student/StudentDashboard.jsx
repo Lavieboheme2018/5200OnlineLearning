@@ -5,15 +5,18 @@ import './StudentDashboard.css';
 function StudentDashboard({ user }) {
   const [enrolledCourses, setEnrolledCourses] = useState([]);
 
-  // Simulate fetching from backend
   useEffect(() => {
     // !!! REPLACE this with actual API call
     const fetchEnrolledCourses = async () => {
-      // Dummy data
-      const data = [
-        { id: '101', title: 'Intro to Python', instructor: 'John Doe' },
-        { id: '102', title: 'React Basics', instructor: 'Jane Smith' },
-      ];
+      // get enrolled courses from API
+      const token = localStorage.getItem('token');
+      const res = await fetch('/api/dashboard', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await res.json();
+      // set enrolled courses to state
       setEnrolledCourses(data);
     };
 
