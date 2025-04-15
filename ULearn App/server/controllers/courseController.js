@@ -158,3 +158,43 @@ export const getCourseAverageGrades = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// Get total revenue for each course
+export const getCourseRevenue = async (req, res) => {
+  try {
+    const result = await Enrollment.aggregate([
+      {
+        $group: {
+          _id: "$course_id", // Group by course_id
+          totalRevenue: { $sum: "$fee" }, // Sum up the fees paid by students
+        },
+      },
+      {
+        $lookup: {
+          from: "courses", // Join with the courses collection
+          localField: "_id",
+          foreignField: "_id",
+          as: "courseDetails",
+        },
+      },
+      {
+        $unwind: "$courseDetails", // Unwind the course details
+      },
+      {
+        $project: {
+          _id: 0,
+          courseId: "$_id",
+          courseTitle: "$courseDetails.title",
+          totalRevenue: 1,
+        },
+      },
+      {
+        $sort: { totalRevenue: -1 }, // Sort by total revenue in descending order
+      },
+    ]);
+
+    res.json(result); // Respond with the aggregation result
+  } catch (error) {
+    res.status(500).json({ error: error.message }); // Handle errors and respond with a 500 status
+  }
+};
