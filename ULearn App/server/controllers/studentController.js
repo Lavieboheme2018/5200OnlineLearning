@@ -3,6 +3,7 @@ import Enrollment from '../models/enrollmentModel.js';
 import Course from '../models/courseModel.js';
 import User from '../models/userModel.js';
 
+// Get all courses a student is enrolled in
 export const getEnrolledCourses = async (req, res) => {
   try {
     const studentId = req.user.userId;
