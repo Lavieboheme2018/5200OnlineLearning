@@ -13,6 +13,7 @@ import authRoutes from "./routes/authRoutes.js";
 import assignmentRoutes from "./routes/assignmentRoutes.js";
 import submissionRoutes from "./routes/submissionRoutes.js";
 import studentRoutes from "./routes/studentRoutes.js";
+import instructorRoutes from "./routes/instructorRoutes.js";
 
 
 const app = express();
@@ -34,7 +35,7 @@ app.use("/api/enrollments", enrollmentRoutes);
 app.use("/api/assignments", assignmentRoutes);
 app.use("/api/submissions", submissionRoutes);
 app.use("/api/student", studentRoutes);
-// app.use("/api/instructor", instructorRoutes);
+app.use("/api/instructor", instructorRoutes);
 // app.use("/api/admin", adminRoutes);
 
 // Database connection and server start
@@ -51,3 +52,4 @@ mongoose
     );
   })
   .catch((err) => console.error("❌ MongoDB connection error:", err));
+ 

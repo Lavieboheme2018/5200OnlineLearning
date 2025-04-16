@@ -8,13 +8,23 @@ function InstructorDashboard({ user }) {
   useEffect(() => {
     // Replace with real API call
     const fetchCourses = async () => {
-      const dummyCourses = [
-        { id: '201', title: 'Advanced Java', students: 12 },
-        { id: '202', title: 'Database Design', students: 8 },
-      ];
-      setCourses(dummyCourses);
-    };
+      try {
+        const token = localStorage.getItem('token');
+        const headers = {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        };
 
+        const response = await fetch('/api/instructor/courses', { headers });
+        if (!response.ok) {
+          throw new Error('Failed to fetch courses');
+        }
+        const data = await response.json();
+        setCourses(data);
+      } catch (error) {
+        console.error('Error fetching courses:', error);
+      }
+    };
     fetchCourses();
   }, []);
 
