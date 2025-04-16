@@ -42,13 +42,17 @@ export const createCourse = async (req, res) => {
   }
 };
 
-// Get all courses
 export const getCourses = async (req, res) => {
   try {
-    const courses = await Course.find().populate("instructor_id"); // Retrieve all courses and populate instructor details
-    res.json(courses); // Respond with the list of courses
+    const courses = await Course.find().populate({
+      path: "instructor_id",
+      select: "name email role",
+    });
+
+    res.status(200).json(courses); // Send populated courses list
   } catch (error) {
-    res.status(500).json({ error: error.message }); // Handle errors and respond with a 500 status
+    console.error("❌ Error fetching courses:", error);
+    res.status(500).json({ error: "Failed to retrieve courses" });
   }
 };
 
