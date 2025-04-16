@@ -1,38 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend
+} from 'recharts';
 import './InstructorDashboard.css';
 
 function InstructorDashboard({ user }) {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    // Replace with real API call
     const fetchCourses = async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const headers = {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        };
-
-        const response = await fetch('/api/instructor/courses', { headers });
-        if (!response.ok) {
-          throw new Error('Failed to fetch courses');
-        }
-        const data = await response.json();
-        setCourses(data);
-      } catch (error) {
-        console.error('Error fetching courses:', error);
-      }
+      const dummyCourses = [
+        { id: '201', title: 'Advanced Java', students: 12 },
+        { id: '202', title: 'Database Design', students: 8 },
+      ];
+      setCourses(dummyCourses);
     };
+
     fetchCourses();
   }, []);
 
   return (
     <div className="instructor-dashboard">
       <h1>Welcome, {user?.name || 'Instructor'} 👋</h1>
+
       <div className="top-bar">
         <h2>Your Courses</h2>
+        <Link to="/instructor/create-course" className="btn-create">
+          + Create New Course
+        </Link>
       </div>
 
       <div className="course-list">
@@ -51,6 +47,21 @@ function InstructorDashboard({ user }) {
           ))
         )}
       </div>
+
+      {/* Chart Section */}
+      {courses.length > 0 && (
+        <div className="course-chart" style={{ marginTop: '2rem' }}>
+          <h2>Student Enrollment Chart</h2>
+          <BarChart width={500} height={300} data={courses}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="title" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="students" fill="#8884d8" />
+          </BarChart>
+        </div>
+      )}
     </div>
   );
 }
