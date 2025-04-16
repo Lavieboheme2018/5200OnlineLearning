@@ -6,6 +6,8 @@ This document provides a detailed explanation of the dashboard features in the *
 
 ## 🖥️ **Admin Dashboard**
 
+![Admin Dashboard](./screenshots/admin-dashboard.png)
+
 ### **Features**
 
 1. **User Statistics**
@@ -47,6 +49,8 @@ This document provides a detailed explanation of the dashboard features in the *
 ---
 
 ## 🧑‍🏫 **Instructor Dashboard**
+
+![Instructor Dashboard](./screenshots/instructor-dashboard.png)
 
 ### **Features**
 
@@ -96,6 +100,8 @@ This document provides a detailed explanation of the dashboard features in the *
 ---
 
 ## 👩‍🎓 **Student Dashboard**
+
+![Student Dashboard](./screenshots/student-dashboard.png)
 
 ### **Features**
 
@@ -237,7 +243,7 @@ This document provides a detailed explanation of the dashboard features in the *
 
 All screenshots referenced in this document are stored in the `./screenshots/` directory for easy access:
 
-1. **Admin Dashboard**:  
+1. **Admin Dashboard**:
    ![Admin Dashboard](./screenshots/admin-dashboard.png)
 
 2. **Browse All Courses**:  
