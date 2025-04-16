@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './AdminDashboard.css';
+import { Link } from 'react-router-dom';
 import {
   PieChart, Pie, Cell, Tooltip, Legend
 } from 'recharts';
@@ -141,36 +142,9 @@ function AdminDashboard({ user }) {
         </PieChart>
       </div>
 
-      <div className="add-course-form">
-        <h2>Add New Course</h2>
-        {message && <p className="form-message">{message}</p>}
-        <form onSubmit={handleAddCourse}>
-          <input
-            type="text"
-            name="title"
-            placeholder="Course Title"
-            value={newCourse.title}
-            onChange={handleInputChange}
-            required
-          />
-          <textarea
-            name="description"
-            placeholder="Course Description"
-            value={newCourse.description}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="category"
-            placeholder="Course Category"
-            value={newCourse.category}
-            onChange={handleInputChange}
-            required
-          />
-          <button type="submit">Add Course</button>
-        </form>
-      </div>
+      <Link to="/create-course" className="btn btn-primary">
+      ➕ Create New Course
+      </Link>
 
       <div className="course-list">
         <h2>All Courses</h2>
