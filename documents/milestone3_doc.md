@@ -243,7 +243,7 @@ This document provides a detailed explanation of the dashboard features in the *
 
 All screenshots referenced in this document are stored in the `./screenshots/` directory for easy access:
 
-1. **Admin Dashboard**:
+1. **Admin Dashboard**:  
    ![Admin Dashboard](./screenshots/admin-dashboard.png)
 
 2. **Browse All Courses**:  
@@ -261,8 +261,14 @@ All screenshots referenced in this document are stored in the `./screenshots/` d
 6. **Register Page**:  
    ![Register Page](./screenshots/register-page.png)
 
-7. **Student Dashboard**:  
+7. **Student Enrollment Chart**:  
+   ![Student Enrollment Chart](./screenshots/student%20enrollment%20chart.jpg)
+
+8. **User Distribution**:  
+   ![User Distribution](./screenshots/user%20distribution.jpg)
+
+9. **Student Dashboard**:  
    ![Student Dashboard](./screenshots/student-dashboard.png)
 
-8. **View Course**:  
-   ![View Course](./screenshots/view-course.png)
+10. **View Course**:  
+    ![View Course](./screenshots/view-course.png)
