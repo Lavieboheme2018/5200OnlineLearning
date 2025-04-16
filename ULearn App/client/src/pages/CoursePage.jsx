@@ -9,15 +9,24 @@ function CoursePage({ user }) {
   const [enrolled, setEnrolled] = useState(false);
   const [loading, setLoading] = useState(true);
 
+  const token = localStorage.getItem('token'); // ✅ Load token once
+
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const courseRes = await axios.get(`/api/courses/${id}`);
+        // ✅ Include token in headers
+        const headers = {
+          Authorization: `Bearer ${token}`,
+        };
+
+        const courseRes = await axios.get(`/api/courses/${id}`, { headers });
         setCourse(courseRes.data);
 
-        // Optional: check enrollment status (if student)
         if (user?.role === 'student') {
-          const enrollRes = await axios.get(`/api/enrollments/check/${user._id}/${id}`);
+          const enrollRes = await axios.get(
+            `/api/enrollments/check/${user._id}/${id}`,
+            { headers }
+          );
           setEnrolled(enrollRes.data.enrolled);
         }
       } catch (error) {
@@ -28,14 +37,24 @@ function CoursePage({ user }) {
     };
 
     fetchCourse();
-  }, [id, user]);
+  }, [id, user, token]);
 
   const handleEnroll = async () => {
     try {
-      await axios.post('/api/enrollments', {
-        student_id: user._id,
-        course_id: id,
-      });
+      const headers = {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      };
+
+      await axios.post(
+        '/api/enrollments',
+        {
+          student_id: user._id,
+          course_id: id,
+        },
+        { headers }
+      );
+
       setEnrolled(true);
       alert('Enrollment successful!');
     } catch (error) {

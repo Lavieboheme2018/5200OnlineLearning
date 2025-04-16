@@ -10,21 +10,49 @@ export const createCourse = async (req, res) => {
       return res.status(400).json({ error: "All fields are required" });
     }
 
-    const course = new Course(req.body); // Create a new course instance
-    await course.save(); // Save the course to the database
-    res.status(201).json(course); // Respond with the created course
+    // Validate that instructor_id is a valid ObjectId
+    if (!mongoose.Types.ObjectId.isValid(instructor_id)) {
+      return res.status(400).json({ error: "Invalid instructor ID" });
+    }
+
+    // Check if the instructor exists
+    const instructor = await User.findById(instructor_id);
+    if (!instructor) {
+      return res.status(404).json({ error: "Instructor not found" });
+    }
+
+    // Optional: Ensure role is actually 'instructor'
+    if (instructor.role !== "instructor" && instructor.role !== "admin") {
+      return res.status(403).json({ error: "User is not an instructor" });
+    }
+
+    // Create and save the course
+    const course = new Course({
+      title,
+      description,
+      category,
+      instructor_id: new mongoose.Types.ObjectId(instructor_id),
+    });
+
+    await course.save();
+    res.status(201).json(course);
   } catch (error) {
-    res.status(400).json({ error: error.message }); // Handle errors and respond with a 400 status
+    console.error("❌ createCourse error:", error);
+    res.status(500).json({ error: error.message });
   }
 };
 
-// Get all courses
 export const getCourses = async (req, res) => {
   try {
-    const courses = await Course.find().populate("instructor_id"); // Retrieve all courses and populate instructor details
-    res.json(courses); // Respond with the list of courses
+    const courses = await Course.find().populate({
+      path: "instructor_id",
+      select: "name email role",
+    });
+
+    res.status(200).json(courses); // Send populated courses list
   } catch (error) {
-    res.status(500).json({ error: error.message }); // Handle errors and respond with a 500 status
+    console.error("❌ Error fetching courses:", error);
+    res.status(500).json({ error: "Failed to retrieve courses" });
   }
 };
 

@@ -2,6 +2,7 @@ import express from "express";
 import {
   createCourse,
   getCourses,
+  getCourse,
   updateCourse,
   deleteCourse,
   getCourseStudentCounts,
@@ -25,6 +26,9 @@ router.post(
 
 // All authenticated users can view courses
 router.get("/", authMiddleware, getCourses);
+
+// All authenticated users can view a single course
+router.get("/:id", authMiddleware, getCourse);
 
 // Only instructors and admins can update courses
 router.put(
