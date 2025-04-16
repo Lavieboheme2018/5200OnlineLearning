@@ -237,11 +237,26 @@ This document provides a detailed explanation of the dashboard features in the *
 
 All screenshots referenced in this document are stored in the `./screenshots/` directory for easy access:
 
-1. **Admin Dashboard**: `admin-dashboard.png`
-2. **Browse All Courses**: `browse-all-courses.png`
-3. **Create Course (Admin)**: `create-course-admin.png`
-4. **Instructor Dashboard**: `instructor-dashboard.png`
-5. **Login Page**: `login-page.png`
-6. **Register Page**: `register-page.png`
-7. **Student Dashboard**: `student-dashboard.png`
-8. **View Course**: `view-course.png`
+1. **Admin Dashboard**:  
+   ![Admin Dashboard](./screenshots/admin-dashboard.png)
+
+2. **Browse All Courses**:  
+   ![Browse All Courses](./screenshots/browse-all-courses.png)
+
+3. **Create Course (Admin)**:  
+   ![Create Course (Admin)](./screenshots/create-course-admin.png)
+
+4. **Instructor Dashboard**:  
+   ![Instructor Dashboard](./screenshots/instructor-dashboard.png)
+
+5. **Login Page**:  
+   ![Login Page](./screenshots/login-page.png)
+
+6. **Register Page**:  
+   ![Register Page](./screenshots/register-page.png)
+
+7. **Student Dashboard**:  
+   ![Student Dashboard](./screenshots/student-dashboard.png)
+
+8. **View Course**:  
+   ![View Course](./screenshots/view-course.png)
