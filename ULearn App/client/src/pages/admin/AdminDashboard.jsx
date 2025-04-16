@@ -25,15 +25,38 @@ function AdminDashboard({ user }) {
   }, []);
 
   const fetchStats = async () => {
-    // Replace with API call to get real stats
-    setStats({
-      users: 120,
-      instructors: 15,
-      students: 100,
-      courses: 35,
-    });
+    try {
+      const token = localStorage.getItem("token");
+  
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+  
+      // Fetch all users
+      const usersRes = await fetch('/api/users', { headers });
+      const users = await usersRes.json();
+  
+      // Count roles
+      const instructors = users.filter(user => user.role === 'instructor').length;
+      const students = users.filter(user => user.role === 'student').length;
+      const admins = users.filter(user => user.role === 'admin').length;
+  
+      // Fetch all courses
+      const coursesRes = await fetch('/api/courses', { headers });
+      const coursesData = await coursesRes.json();
+  
+      setStats({
+        users: users.length,
+        instructors,
+        students,
+        courses: coursesData.length,
+      });
+    } catch (error) {
+      console.error("Error fetching stats:", error);
+      setMessage("❌ Failed to fetch stats.");
+    }
   };
-
+  
   const fetchCourses = async () => {
     try {
       const token = localStorage.getItem('token');
