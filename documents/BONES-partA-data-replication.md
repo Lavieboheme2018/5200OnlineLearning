@@ -13,6 +13,17 @@ We deployed our backend MongoDB database on **MongoDB Atlas**, using the default
 This architecture provides high availability and fault tolerance without any manual configuration.
 
 ---
+### 🛠️ Deployment Method
+
+The replica set was configured using **MongoDB Atlas**.
+
+MongoDB Atlas automatically provisions a 3-node replica set on the free-tier (M0 cluster). While administrative access (e.g., `rs.stepDown()`) is restricted on free-tier clusters, we were able to confirm the replica set configuration using:
+
+- Atlas UI's **Replica Set Member** view
+- `rs.status()` command via the shell
+
+No manual configuration of `mongod` is required in Atlas; replica set members are provisioned and maintained by the platform.
+
 
 ## 🔧 Replica Set Member Snapshot
 
