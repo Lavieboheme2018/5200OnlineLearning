@@ -48,6 +48,7 @@ function InstructorDashboard({ user }) {
         )}
       </div>
 
+
       {/* Chart Section */}
       {courses.length > 0 && (
         <div className="course-chart" style={{ marginTop: '2rem' }}>
@@ -64,6 +65,8 @@ function InstructorDashboard({ user }) {
       )}
     </div>
   );
-}
+} 
+
+
 
 export default InstructorDashboard;
