@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";  
 import { jwtDecode } from "jwt-decode"; 
+import './Auth.css';
 
 const Login = ({ setUser }) => {
   const [formData, setFormData] = useState({
@@ -21,26 +22,18 @@ const Login = ({ setUser }) => {
     try {
       const res = await axios.post("http://localhost:3000/api/auth/login", formData);
       const { token } = res.data;
-  
-      // Ensure we have the token
+
       if (!token) {
         setMessage("No token received");
         return;
       }
-  
-      // Store the token
+
       localStorage.setItem("token", token);
-  
-      // Decode the JWT token
-      const decodedToken = jwtDecode(token); // or `jwtDecode(token)` if using wildcard import
-      console.log(decodedToken); // Check decoded token structure
-  
-      setMessage("Login successful");
-  
-      // Optional: Set user info globally if needed (via setUser)
+      const decodedToken = jwtDecode(token);
       setUser(decodedToken);
-  
-      // Redirect based on the role in the decoded token
+      setMessage("Login successful");
+
+      // 跳转到对应 dashboard
       if (decodedToken.role === "admin") {
         navigate("/admin/dashboard");
       } else if (decodedToken.role === "instructor") {
@@ -49,32 +42,33 @@ const Login = ({ setUser }) => {
         navigate("/student/dashboard");
       }
     } catch (err) {
-      console.log("Login error: ", err);
       setMessage(err.response?.data?.message || "Login failed");
     }
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
+    <div className="auth-container">
+      <div className="auth-card">
+        <h2 className="auth-title">Login to ULearn</h2>
+        {message && <p className="auth-message">{message}</p>}
+        <form onSubmit={handleSubmit} className="auth-form">
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+            required
+          />
+          <button type="submit" className="btn btn-primary">Login</button>
+        </form>
+      </div>
     </div>
   );
 };
