@@ -31,7 +31,7 @@ const CreateCourse = ({ user }) => {
         "/api/courses",
         {
           ...formData,
-          instructor_id: user._id, // backend expects ObjectId
+          instructor_id: formData.instructor_id,
         },
         {
           headers: {
@@ -58,39 +58,53 @@ const CreateCourse = ({ user }) => {
 
       <form className="create-course-form" onSubmit={handleSubmit}>
         <input
-          type="text"
-          name="_id"
-          placeholder="Course ID (e.g. c101)"
-          value={formData._id}
-          onChange={handleChange}
-          required
+            type="text"
+            name="_id"
+            placeholder="Course ID (e.g. c101)"
+            value={formData._id}
+            onChange={handleChange}
+            required
         />
         <input
-          type="text"
-          name="title"
-          placeholder="Course Title"
-          value={formData.title}
-          onChange={handleChange}
-          required
+            type="text"
+            name="title"
+            placeholder="Course Title"
+            value={formData.title}
+            onChange={handleChange}
+            required
         />
         <textarea
-          name="description"
-          placeholder="Course Description"
-          value={formData.description}
-          onChange={handleChange}
-          required
+            name="description"
+            placeholder="Course Description"
+            value={formData.description}
+            onChange={handleChange}
+            required
         />
         <input
-          type="text"
-          name="category"
-          placeholder="Course Category"
-          value={formData.category}
-          onChange={handleChange}
-          required
+            type="text"
+            name="category"
+            placeholder="Course Category"
+            value={formData.category}
+            onChange={handleChange}
+            required
         />
 
+        <select
+            name="instructor_id"
+            value={formData.instructor_id}
+            onChange={handleChange}
+            required
+        >
+            <option value="">Select Instructor</option>
+            {instructors.map((instructor) => (
+            <option key={instructor._id} value={instructor._id}>
+                {instructor.name} ({instructor.email})
+            </option>
+            ))}
+        </select>
         <button type="submit">Create Course</button>
-      </form>
+    </form>
+
     </div>
   );
 };

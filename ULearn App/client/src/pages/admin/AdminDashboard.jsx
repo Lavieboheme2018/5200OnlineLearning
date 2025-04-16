@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AdminDashboard.css';
 
 function AdminDashboard({ user }) {
@@ -9,15 +10,9 @@ function AdminDashboard({ user }) {
     courses: 0,
   });
 
-  const [newCourse, setNewCourse] = useState({
-    title: '',
-    description: '',
-    category: '',
-    instructor_id: '', // Optional: can default to admin for now
-  });
-
   const [courses, setCourses] = useState([]);
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchStats();
@@ -26,25 +21,18 @@ function AdminDashboard({ user }) {
 
   const fetchStats = async () => {
     try {
-      const token = localStorage.getItem("token");
-  
-      const headers = {
-        Authorization: `Bearer ${token}`,
-      };
-  
-      // Fetch all users
+      const token = localStorage.getItem('token');
+      const headers = { Authorization: `Bearer ${token}` };
+
       const usersRes = await fetch('/api/users', { headers });
       const users = await usersRes.json();
-  
-      // Count roles
-      const instructors = users.filter(user => user.role === 'instructor').length;
-      const students = users.filter(user => user.role === 'student').length;
-      const admins = users.filter(user => user.role === 'admin').length;
-  
-      // Fetch all courses
+
+      const instructors = users.filter(u => u.role === 'instructor').length;
+      const students = users.filter(u => u.role === 'student').length;
+
       const coursesRes = await fetch('/api/courses', { headers });
       const coursesData = await coursesRes.json();
-  
+
       setStats({
         users: users.length,
         instructors,
@@ -52,18 +40,16 @@ function AdminDashboard({ user }) {
         courses: coursesData.length,
       });
     } catch (error) {
-      console.error("Error fetching stats:", error);
-      setMessage("❌ Failed to fetch stats.");
+      console.error('Error fetching stats:', error);
+      setMessage('❌ Failed to fetch stats.');
     }
   };
-  
+
   const fetchCourses = async () => {
     try {
       const token = localStorage.getItem('token');
       const res = await fetch('/api/courses', {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
       setCourses(data);
@@ -73,38 +59,8 @@ function AdminDashboard({ user }) {
     }
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewCourse((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleAddCourse = async (e) => {
-    e.preventDefault();
-    try {
-      const token = localStorage.getItem('token');
-      const courseToAdd = {
-        ...newCourse,
-        _id: Date.now().toString(),
-        instructor_id: user._id, // Assumes admin or assign to another ID
-      };
-
-      const res = await fetch('/api/courses', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(courseToAdd),
-      });
-
-      if (!res.ok) throw new Error('Failed to add course');
-      setMessage('✅ Course added successfully!');
-      setNewCourse({ title: '', description: '', category: '', instructor_id: '' });
-      fetchCourses(); // Refresh course list
-    } catch (err) {
-      console.error(err);
-      setMessage(`❌ ${err.message}`);
-    }
+  const handleNavigateToCreate = () => {
+    navigate('/create-course');
   };
 
   return (
@@ -119,35 +75,10 @@ function AdminDashboard({ user }) {
         <div className="stat-card"><h3>Courses</h3><p>{stats.courses}</p></div>
       </div>
 
-      <div className="add-course-form">
-        <h2>Add New Course</h2>
-        {message && <p className="form-message">{message}</p>}
-        <form onSubmit={handleAddCourse}>
-          <input
-            type="text"
-            name="title"
-            placeholder="Course Title"
-            value={newCourse.title}
-            onChange={handleInputChange}
-            required
-          />
-          <textarea
-            name="description"
-            placeholder="Course Description"
-            value={newCourse.description}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="category"
-            placeholder="Course Category"
-            value={newCourse.category}
-            onChange={handleInputChange}
-            required
-          />
-          <button type="submit">Add Course</button>
-        </form>
+      <div className="create-course-button-container">
+        <button className="btn-create-course" onClick={handleNavigateToCreate}>
+          ➕ Create New Course
+        </button>
       </div>
 
       <div className="course-list">
