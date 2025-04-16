@@ -19,9 +19,13 @@ const Register = () => {
       const res = await axios.post("/api/auth/signup", formData);
       setMessage(res.data.message);
     } catch (err) {
-      setMessage(err.response?.data?.message || "Registration failed");
+      // ✅ check backend
+      console.log("Registration error:", err.response?.data);
+  
+      // ✅ show detailed error
+      setMessage(err.response?.data?.message || err.response?.data?.error || "Registration failed");
     }
-  };
+  };  
 
   return (
     <div className="auth-container">

@@ -14,7 +14,8 @@ export const signup = async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
-    const user = new User({ _id: email, name, email, password, role });
+    //use defaut ObjectId to avoid conflicts
+    const user = new User({ name, email, password, role });
     await user.save();
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
