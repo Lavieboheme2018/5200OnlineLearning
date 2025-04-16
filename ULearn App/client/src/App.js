@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import CourseList from './pages/CourseList';
 import CoursePage from './pages/CoursePage';
+import CreateCourse from './pages/CreateCourse';
 
 // Dashboards
 import StudentDashboard from './pages/student/StudentDashboard';
@@ -33,10 +34,15 @@ function App() {
 
   // PrivateRoute component to protect routes based on login and role
   const PrivateRoute = useCallback(({ children, role }) => {
-    if (!user) return <Navigate to="/login" />;
-    if (role && user.role !== role) return <Navigate to="/" />;
+    if (!user) return <Navigate to="/login" replace />;
+    const isAuthorized = Array.isArray(role)
+      ? role.includes(user.role)
+      : user.role === role;
+  
+    if (role && !isAuthorized) return <Navigate to="/" replace />;
     return children;
   }, [user]);
+  
 
   return (
     <Router>
@@ -55,6 +61,15 @@ function App() {
           element={
             <PrivateRoute>
               <CoursePage user={user} />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/create-course"
+          element={
+            <PrivateRoute role="admin">
+              <CreateCourse user={user} />
             </PrivateRoute>
           }
         />

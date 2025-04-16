@@ -33,9 +33,6 @@ function InstructorDashboard({ user }) {
       <h1>Welcome, {user?.name || 'Instructor'} 👋</h1>
       <div className="top-bar">
         <h2>Your Courses</h2>
-        <Link to="/instructor/create-course" className="btn-create">
-          + Create New Course
-        </Link>
       </div>
 
       <div className="course-list">
