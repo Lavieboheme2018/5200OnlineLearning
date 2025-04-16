@@ -1,553 +1,247 @@
-## 1. **ACID Transactions in MongoDB**
+# 📊 Dashboard Features Documentation
 
-### **Implementation Overview**
-
-The project extensively uses MongoDB's ACID transaction capabilities to ensure data consistency and reliability. Transactions are implemented in various controllers, such as `lessonController.js`, `examController.js`, `assignmentController.js`, and others. Each transaction begins with `mongoose.startSession()` and ensures atomicity by committing or aborting the transaction based on the operation's success or failure.
-
-### **Error Handling Strategies**
-
-- **Error Detection:** Errors are caught using `try-catch` blocks.
-- **Rollback Mechanism:** If an error occurs, the transaction is aborted using `session.abortTransaction()`, ensuring no partial updates are made to the database.
-- **Session Management:** Each transaction ends with `session.endSession()` to release resources.
-
-### **Examples**
-
-#### Successful Transaction
-
-In the `createLesson` function:
-
-```javascript
-const session = await mongoose.startSession();
-session.startTransaction();
-
-try {
-  const lesson = new Lesson(req.body);
-  await lesson.save({ session });
-  await session.commitTransaction();
-  session.endSession();
-  res.status(201).json(lesson);
-} catch (error) {
-  await session.abortTransaction();
-  session.endSession();
-  res.status(400).json({ error: error.message });
-}
-```
-
-#### Rollback on Failure
-
-In the `deleteAssignment` function:
-
-```javascript
-const session = await mongoose.startSession();
-session.startTransaction();
-
-try {
-  const assignment = await Assignment.findByIdAndDelete(req.params.id, {
-    session,
-  });
-  if (!assignment) {
-    await session.abortTransaction();
-    session.endSession();
-    return res.status(404).json({ message: "Assignment not found" });
-  }
-  await session.commitTransaction();
-  session.endSession();
-  res.json({ message: "Assignment deleted successfully" });
-} catch (error) {
-  await session.abortTransaction();
-  session.endSession();
-  res.status(500).json({ error: error.message });
-}
-```
-
-### **Test Cases**
-
-1. **Successful Transaction:** Creating a lesson with valid data results in a new lesson being saved to the database.
-2. **Rollback on Failure:** Attempting to delete a non-existent assignment triggers a rollback, ensuring no unintended changes are made.
+This document provides a detailed explanation of the dashboard features in the **5200 Online Learning Platform**, including screenshots and how they correspond to relevant MongoDB collections and queries.
 
 ---
 
-## 2. **Role-Based Access Control (RBAC) & Security**
+## 🖥️ **Admin Dashboard**
 
-### **Role Definitions**
+### **Features**
 
-The platform defines the following roles:
+1. **User Statistics**
 
-- **Admin:** Full access to manage users, courses, lessons, and other resources.
-- **Instructor:** Can create and manage courses, lessons, and assignments.
-- **Student:** Can enroll in courses, submit assignments, and take exams.
+   - Displays the total number of users, instructors, students, and courses.
+   - Corresponding Query:
+     ```javascript
+     const users = await User.find();
+     const instructors = users.filter(
+       (user) => user.role === "instructor"
+     ).length;
+     const students = users.filter((user) => user.role === "student").length;
+     const courses = await Course.find().countDocuments();
+     ```
+   - **Collections Used**: users, courses
 
-### **Implementation Details**
+2. **User Role Distribution (Pie Chart)**
 
-RBAC is implemented using middleware functions in `authMiddleware.js`:
+   - Visualizes the distribution of instructors, students, and admins.
+   - Corresponding Query:
+     ```javascript
+     const stats = {
+       instructors: users.filter((user) => user.role === "instructor").length,
+       students: users.filter((user) => user.role === "student").length,
+       admins: users.length - instructors - students,
+     };
+     ```
+   - **Collections Used**: user
 
-- **Authentication Middleware:** Verifies JWT tokens to ensure the user is authenticated.
-- **Role Middleware:** Checks if the user's role matches the required permissions for the endpoint.
+3. **Course Management**
 
-#### Example: Role Middleware
-
-```javascript
-export const roleMiddleware = (roles) => (req, res, next) => {
-  if (!roles.includes(req.user.role)) {
-    return res.status(403).json({ message: "Access denied" });
-  }
-  next();
-};
-```
-
-### **Examples**
-
-1. **Admin Access:** Only admins can delete users.
-   ```javascript
-   app.delete(
-     "/users/:id",
-     authMiddleware,
-     roleMiddleware(["admin"]),
-     deleteUser
-   );
-   ```
-2. **Instructor Access:** Only instructors can create lessons.
-   ```javascript
-   app.post(
-     "/lessons",
-     authMiddleware,
-     roleMiddleware(["instructor"]),
-     createLesson
-   );
-   ```
-
-### **Security Measures**
-
-- **JWT Authentication:** Ensures secure communication between the client and server.
-- **Password Hashing:** User passwords are stored as hashed values for security.
-  -# Project Report: 5200 Online Learning Platform
-
-## 1. **ACID Transactions in MongoDB**
-
-### **Implementation Overview**
-
-The project extensively uses MongoDB's ACID transaction capabilities to ensure data consistency and reliability. Transactions are implemented in various controllers, such as `lessonController.js`, `examController.js`, `assignmentController.js`, and others. Each transaction begins with `mongoose.startSession()` and ensures atomicity by committing or aborting the transaction based on the operation's success or failure.
-
-### **Error Handling Strategies**
-
-- **Error Detection:** Errors are caught using `try-catch` blocks.
-- **Rollback Mechanism:** If an error occurs, the transaction is aborted using `session.abortTransaction()`, ensuring no partial updates are made to the database.
-- **Session Management:** Each transaction ends with `session.endSession()` to release resources.
-
-### **Examples**
-
-#### Successful Transaction
-
-In the `createLesson` function:
-
-```javascript
-const session = await mongoose.startSession();
-session.startTransaction();
-
-try {
-  const lesson = new Lesson(req.body);
-  await lesson.save({ session });
-  await session.commitTransaction();
-  session.endSession();
-  res.status(201).json(lesson);
-} catch (error) {
-  await session.abortTransaction();
-  session.endSession();
-  res.status(400).json({ error: error.message });
-}
-```
-
-Begining of transaction:
-
-```javascript
-session.startTransaction();
-```
-
-End of transaction:
-
-```javascript
-await session.commitTransaction();
-```
-
-The Lesson collection is affected. A new Lesson document is inserted using the session.
-
-Screenshot:
-![Successful Transaction for Creating Lesson](./test_success_lessons.png)
-
-#### Rollback on Failure
-
-In the `createAssignment` function:
-
-```javascript
-export const createAssignment = async (req, res) => {
-  const session = await mongoose.startSession();
-  session.startTransaction();
-
-  try {
-    const assignment = new Assignment(req.body);
-
-    // Save the assignment within the transaction
-    await assignment.save({ session });
-
-    // Commit the transaction
-    await session.commitTransaction();
-    session.endSession();
-
-    res.status(201).json(assignment);
-  } catch (error) {
-    // Abort the transaction in case of an error
-    await session.abortTransaction();
-    session.endSession();
-
-    res.status(400).json({ error: error.message });
-  }
-};
-```
-
-Begining of transaction:
-
-```javascript
-session.startTransaction();
-```
-
-End of transaction:
-
-```javascript
-session.abortTransaction();
-```
-
-(when transaction unsuccessful)
-The Assignment collection is affected. Single document created.
-
-Rollback mechanism: If the assignment is not found or an error occurs, `abortTransaction()` is called.
-Session Cleanup: `session.endSession()` is called in both success and failure branches to release resources.
-
-Screenshot:
-![Failed Transaction for creating Assignment](./test_failed_assignment.png)
-
-### **Test Cases**
-
-1. **Successful Transaction:** Creating a lesson with valid data results in a new lesson being saved to the database.
-2. **Rollback on Failure:** Attempting to delete a non-existent assignment triggers a rollback, ensuring no unintended changes are made.
-
-### **Comparing MongoDB vs. RDBMS**
-
-1. Data Model:
-   MongoDB offers greater flexibility while encouraging normalization. It uses documents (BSON/JSON) inside collections.
-   RDBMS like MySQL uses tables, rows, and relationships.
-2. ACID Compliance
-   RDBMS: Full ACID compliance is standard and robust.
-   MongoDB supports multi-document ACID transactions, but it’s newer and less performant compared to RDBMS.
+   - Allows admins to view, add, and manage courses.
+   - Corresponding Query:
+     ```javascript
+     const courses = await Course.find();
+     ```
+   - **Collections Used**: courses
 
 ---
 
-## 2. **Role-Based Access Control (RBAC) & Security**
+## 🧑‍🏫 **Instructor Dashboard**
 
-### **Role Definitions**
+### **Features**
 
-The platform defines the following roles:
+1. **Course List**
 
-- **Admin:** Full access to manage users, courses, lessons, and other resources.
-- **Instructor:** Can create and manage courses, lessons, and assignments.
-- **Student:** Can enroll in courses, submit assignments, and take exams.
+   - Displays all courses created by the instructor, along with the number of enrolled students.
+   - Corresponding Query:
+     ```javascript
+     const courses = await Course.find({ instructor_id: req.user.id }).populate(
+       "enrollments"
+     );
+     ```
+   - **Collections Used**: courses, enrollment
 
-### **Implementation Details**
+2. **Student Enrollment Chart**
 
-RBAC is implemented using middleware functions in `authMiddleware.js`:
+   - Bar chart showing the number of students enrolled in each course.
+   - Corresponding Query:
+     ```javascript
+     const result = await Enrollment.aggregate([
+       { $group: { _id: "$course_id", studentCount: { $sum: 1 } } },
+       {
+         $lookup: {
+           from: "courses",
+           localField: "_id",
+           foreignField: "_id",
+           as: "courseDetails",
+         },
+       },
+       { $unwind: "$courseDetails" },
+       {
+         $project: {
+           courseId: "$_id",
+           courseTitle: "$courseDetails.title",
+           studentCount: 1,
+         },
+       },
+     ]);
+     ```
+   - **Collections Used**: enrollments, courses
 
-- **Authentication Middleware:** Verifies JWT tokens to ensure the user is authenticated.
-- **Role Middleware:** Checks if the user's role matches the required permissions for the endpoint.
+3. **Course Actions**
 
-#### Example: Role Middleware
-
-```javascript
-export const roleMiddleware = (roles) => (req, res, next) => {
-  if (!roles.includes(req.user.role)) {
-    return res.status(403).json({ message: "Access denied" });
-  }
-  next();
-};
-```
-
-### **Examples**
-
-1. **Admin Access:** Only admins can delete users.
-   ```javascript
-   app.delete(
-     "/users/:id",
-     authMiddleware,
-     roleMiddleware(["admin"]),
-     deleteUser
-   );
-   ```
-2. **Instructor Access:** Only instructors can create lessons.
-   ```javascript
-   app.post(
-     "/lessons",
-     authMiddleware,
-     roleMiddleware(["instructor"]),
-     createLesson
-   );
-   ```
-
-### **Security Measures**
-
-- **JWT Authentication:** Ensures secure communication between the client and server by validating JSON Web Tokens (JWT) for each request.
-- **Password Hashing:** User passwords are securely stored as hashed values using algorithms like bcrypt to prevent unauthorized access in case of a data breach.
-- **Error Responses:** Unauthorized or forbidden access triggers appropriate HTTP status codes:
-  - `401 Unauthorized`: Returned when the user is not authenticated.
-  - `403 Forbidden`: Returned when the user does not have the required permissions to access a resource.
-
-## 3. **Advanced MongoDB Queries & Aggregation**
-
-### **Purpose and Implementation**
-
-The project uses MongoDB's aggregation framework to derive insights and perform complex queries. These queries are optimized for performance and provide valuable business insights.
+   - Instructors can view or edit their courses.
+   - **Collections Used**: courses
 
 ---
 
-### **Examples**
+## 👩‍🎓 **Student Dashboard**
 
-#### 1. **Get Student Counts for Each Course**
+### **Features**
 
-**Purpose:** Determine the popularity of courses.
+1. **Enrolled Courses**
 
-```javascript
-const result = await Enrollment.aggregate([
-  { $group: { _id: "$course_id", studentCount: { $sum: 1 } } },
-  {
-    $lookup: {
-      from: "courses",
-      localField: "_id",
-      foreignField: "_id",
-      as: "courseDetails",
-    },
-  },
-  { $unwind: "$courseDetails" },
-  {
-    $project: {
-      courseId: "$_id",
-      courseTitle: "$courseDetails.title",
-      studentCount: 1,
-    },
-  },
-  { $sort: { studentCount: -1 } },
-]);
-```
+   - Displays all courses the student is enrolled in, along with the instructor's name.
+   - Corresponding Query:
+     ```javascript
+     const enrollments = await Enrollment.find({ student_id: req.user.id });
+     const courseIds = enrollments.map((e) => e.course_id);
+     const courses = await Course.find({ _id: { $in: courseIds } }).populate(
+       "instructor_id"
+     );
+     ```
+   - **Collections Used**: enrollments, users
 
-**Business Value:** Helps identify high-demand courses for resource allocation.
+2. **Browse More Courses**
+
+   - Provides a link to browse available courses.
+   - **Collections Used**: courses
 
 ---
 
-#### 2. **Get Average Grades for Each Course**
+## 📚 **Corresponding MongoDB Queries**
 
-**Purpose:** Evaluate course performance.
+### **1. Get Student Counts for Each Course**
 
-```javascript
-const result = await Submission.aggregate([
-  {
-    $group: {
-      _id: "$assignmentDetails.course_id",
-      averageGrade: { $avg: "$grade" },
+- **Purpose**: Display the number of students enrolled in each course.
+- **Query**:
+  ```javascript
+  const result = await Enrollment.aggregate([
+    { $group: { _id: "$course_id", studentCount: { $sum: 1 } } },
+    {
+      $lookup: {
+        from: "courses",
+        localField: "_id",
+        foreignField: "_id",
+        as: "courseDetails",
+      },
     },
-  },
-  {
-    $lookup: {
-      from: "courses",
-      localField: "_id",
-      foreignField: "_id",
-      as: "courseDetails",
+    { $unwind: "$courseDetails" },
+    {
+      $project: {
+        courseId: "$_id",
+        courseTitle: "$courseDetails.title",
+        studentCount: 1,
+      },
     },
-  },
-  { $unwind: "$courseDetails" },
-  {
-    $project: {
-      courseId: "$_id",
-      courseTitle: "$courseDetails.title",
-      averageGrade: { $round: ["$averageGrade", 2] },
-    },
-  },
-]);
-```
+  ]);
+  ```
 
-**Business Value:** Identifies courses where students may need additional support.
+### **2. Get Instructor Course Counts**
+
+- **Purpose**: Display the number of courses created by each instructor.
+- **Query**:
+  ```javascript
+  const result = await Course.aggregate([
+    { $group: { _id: "$instructor_id", courseCount: { $sum: 1 } } },
+    {
+      $lookup: {
+        from: "users",
+        localField: "_id",
+        foreignField: "_id",
+        as: "instructorDetails",
+      },
+    },
+    { $unwind: "$instructorDetails" },
+    {
+      $project: {
+        instructorId: "$_id",
+        instructorName: "$instructorDetails.name",
+        courseCount: 1,
+      },
+    },
+  ]);
+  ```
+- **Collections Used**: courses, users
+
+### **3. Get Total Revenue for Each Course**
+
+- **Purpose**: Display the total revenue generated by each course.
+- **Query**:
+  ```javascript
+  const result = await Enrollment.aggregate([
+    { $group: { _id: "$course_id", totalRevenue: { $sum: "$fee" } } },
+    {
+      $lookup: {
+        from: "courses",
+        localField: "_id",
+        foreignField: "_id",
+        as: "courseDetails",
+      },
+    },
+    { $unwind: "$courseDetails" },
+    {
+      $project: {
+        courseId: "$_id",
+        courseTitle: "$courseDetails.title",
+        totalRevenue: 1,
+      },
+    },
+  ]);
+  ```
+- **Collections Used**: enrollments, courses
+
+### **4. Get User Role Distribution**
+
+- **Purpose**: Display the distribution of user roles (e.g., instructors, students, admins).
+- **Query**:
+  ```javascript
+  const users = await User.find();
+  const stats = {
+    instructors: users.filter((user) => user.role === "instructor").length,
+    students: users.filter((user) => user.role === "student").length,
+    admins:
+      users.length -
+      users.filter((user) => user.role === "instructor").length -
+      users.filter((user) => user.role === "student").length,
+  };
+  ```
+- **Collections Used**: users
+
+### **5. Get Enrolled Courses for a Student**
+
+- **Purpose**: Display all courses a student is enrolled in, along with the instructor's name.
+- **Query**:
+  ```javascript
+  const enrollments = await Enrollment.find({ student_id: req.user.id });
+  const courseIds = enrollments.map((e) => e.course_id);
+  const courses = await Course.find({ _id: { $in: courseIds } }).populate(
+    "instructor_id"
+  );
+  ```
+- **Collections Used**: enrollments, courses, users
 
 ---
 
-#### 3. **Get Assignment Counts for Each Course**
+### **Screenshots**
 
-**Purpose:** Track workload distribution.
+All screenshots referenced in this document are stored in the `./screenshots/` directory for easy access:
 
-```javascript
-const result = await Assignment.aggregate([
-  { $group: { _id: "$course_id", assignmentCount: { $sum: 1 } } },
-  {
-    $lookup: {
-      from: "courses",
-      localField: "_id",
-      foreignField: "_id",
-      as: "courseDetails",
-    },
-  },
-  { $unwind: "$courseDetails" },
-  {
-    $project: {
-      courseId: "$_id",
-      courseTitle: "$courseDetails.title",
-      assignmentCount: 1,
-    },
-  },
-  { $sort: { assignmentCount: -1 } },
-]);
-```
-
-**Business Value:** Ensures balanced workloads across courses.
-
----
-
-#### 4. **Get Instructor Course Counts**
-
-**Purpose:** Identify the number of courses created by each instructor.
-
-```javascript
-const result = await Course.aggregate([
-  {
-    $group: {
-      _id: "$instructor_id",
-      courseCount: { $sum: 1 },
-    },
-  },
-  {
-    $lookup: {
-      from: "users",
-      localField: "_id",
-      foreignField: "_id",
-      as: "instructorDetails",
-    },
-  },
-  { $unwind: "$instructorDetails" },
-  {
-    $project: {
-      instructorId: "$_id",
-      instructorName: "$instructorDetails.name",
-      courseCount: 1,
-    },
-  },
-  { $sort: { courseCount: -1 } },
-]);
-```
-
-**Business Value:** Helps track instructor contributions and workload.
-
----
-
-#### 5. **Get Total Revenue for Each Course**
-
-**Purpose:** Calculate the total revenue generated by each course.
-
-```javascript
-const result = await Enrollment.aggregate([
-  {
-    $group: {
-      _id: "$course_id",
-      totalRevenue: { $sum: "$fee" },
-    },
-  },
-  {
-    $lookup: {
-      from: "courses",
-      localField: "_id",
-      foreignField: "_id",
-      as: "courseDetails",
-    },
-  },
-  { $unwind: "$courseDetails" },
-  {
-    $project: {
-      courseId: "$_id",
-      courseTitle: "$courseDetails.title",
-      totalRevenue: 1,
-    },
-  },
-  { $sort: { totalRevenue: -1 } },
-]);
-```
-
-**Business Value:** Provides insights into the financial performance of courses.
-
----
-
-### **Sample Results**
-
-1. **Student Counts for Each Course:**
-
-   ```json
-   [
-     { "courseId": "c8", "courseTitle": "Modern Physics", "studentCount": 120 },
-     {
-       "courseId": "c6",
-       "courseTitle": "Organic Chemistry I",
-       "studentCount": 95
-     }
-   ]
-   ```
-
-2. **Average Grades for Each Course:**
-
-   ```json
-   [
-     {
-       "courseId": "c12",
-       "courseTitle": "Machine Learning 101",
-       "averageGrade": 85.5
-     },
-     {
-       "courseId": "c17",
-       "courseTitle": "Physical Chemistry",
-       "averageGrade": 78.3
-     }
-   ]
-   ```
-
-3. **Assignment Counts for Each Course:**
-
-   ```json
-   [
-     {
-       "courseId": "c3",
-       "courseTitle": "Data Structures",
-       "assignmentCount": 10
-     },
-     { "courseId": "c5", "courseTitle": "Algorithms", "assignmentCount": 8 }
-   ]
-   ```
-
-4. **Instructor Course Counts:**
-
-   ```json
-   [
-     { "instructorId": "i1", "instructorName": "John Doe", "courseCount": 5 },
-     { "instructorId": "i2", "instructorName": "Jane Smith", "courseCount": 3 }
-   ]
-   ```
-
-5. **Total Revenue for Each Course:**
-
-   ```json
-   [
-     {
-       "courseId": "c1",
-       "courseTitle": "Introduction to Programming",
-       "totalRevenue": 200
-     },
-     {
-       "courseId": "c2",
-       "courseTitle": "Advanced Mathematics",
-       "totalRevenue": 150
-     }
-   ]
-   ```
-
----
-
-This section demonstrates the use of MongoDB's aggregation framework to provide actionable insights and support data-driven decision-making.
+1. **Admin Dashboard - User Statistics**: `admin_user_stats.png`
+2. **Admin Dashboard - Role Distribution**: `admin_role_distribution.png`
+3. **Admin Dashboard - Course Management**: `admin_course_management.png`
+4. **Instructor Dashboard - Course List**: `instructor_course_list.png`
+5. **Instructor Dashboard - Enrollment Chart**: `instructor_enrollment_chart.png`
+6. **Instructor Dashboard - Course Actions**: `instructor_course_actions.png`
+7. **Student Dashboard - Enrolled Courses**: `student_enrolled_courses.png`
+8. **Student Dashboard - Browse Courses**: `student_browse_courses.png`
