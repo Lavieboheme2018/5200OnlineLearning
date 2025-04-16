@@ -237,11 +237,11 @@ This document provides a detailed explanation of the dashboard features in the *
 
 All screenshots referenced in this document are stored in the `./screenshots/` directory for easy access:
 
-1. **Admin Dashboard - User Statistics**: `admin_user_stats.png`
-2. **Admin Dashboard - Role Distribution**: `admin_role_distribution.png`
-3. **Admin Dashboard - Course Management**: `admin_course_management.png`
-4. **Instructor Dashboard - Course List**: `instructor_course_list.png`
-5. **Instructor Dashboard - Enrollment Chart**: `instructor_enrollment_chart.png`
-6. **Instructor Dashboard - Course Actions**: `instructor_course_actions.png`
-7. **Student Dashboard - Enrolled Courses**: `student_enrolled_courses.png`
-8. **Student Dashboard - Browse Courses**: `student_browse_courses.png`
+1. **Admin Dashboard**: `admin-dashboard.png`
+2. **Browse All Courses**: `browse-all-courses.png`
+3. **Create Course (Admin)**: `create-course-admin.png`
+4. **Instructor Dashboard**: `instructor-dashboard.png`
+5. **Login Page**: `login-page.png`
+6. **Register Page**: `register-page.png`
+7. **Student Dashboard**: `student-dashboard.png`
+8. **View Course**: `view-course.png`
